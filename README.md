@@ -40,7 +40,7 @@ _Track your quality evolution_
 Get a code quality glance at your project and track its quality evolution over time, easily paying back your technical debt.Give an example
 ```
 ## Built With
-* [<img src='http://assets.stickpng.com/thumbs/584816c8cef1014c0b5e4987.png' width='30' />](https://www.jetbrains.com/phpstorm/) - **PhpStorm**, The Lightning-Smart PHP IDE.
+* [<img src='https://www.maxime-dalgobbo.fr/blog/wp-content/uploads/2019/02/PhpStorm_Logo-e1549874540765.png' width='30' />](https://www.jetbrains.com/phpstorm/) - **PhpStorm**, The Lightning-Smart PHP IDE.
 * [<img src='https://upload.wikimedia.org/wikipedia/commons/0/03/Fish_shell_logo_ascii.png' width='30' />](https://fishshell.com/) - **Fish**, Command line shell for Linux, macOS, and the rest of the family. 
 
 ## Versioning
