@@ -1,6 +1,4 @@
-# VeLiCity 
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/82ae76253256496cb03ed0cceafeeec5)](https://app.codacy.com/app/Franckeddy/VeLiCity?utm_source=github.com&utm_medium=referral&utm_content=Franckeddy/VeLiCity&utm_campaign=Badge_Grade_Dashboard)
+# VeLiCity [![Codacy Badge](https://api.codacy.com/project/badge/Grade/82ae76253256496cb03ed0cceafeeec5)](https://app.codacy.com/app/Franckeddy/VeLiCity?utm_source=github.com&utm_medium=referral&utm_content=Franckeddy/VeLiCity&utm_campaign=Badge_Grade_Dashboard)
 
 ## Design an interactive bike rental map
 
@@ -48,7 +46,7 @@ Get a code quality glance at your project and track its quality evolution over t
 
 ## Versioning
 [<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1200px-Octicons-mark-github.svg.png' width='50' />
-](https://github.com/) - Github, Web-based version-control and collaboration platform for software developers.
+](https://github.com/) - **Github**, Web-based version-control and collaboration platform for software developers.
 
 ## URL
 * 
