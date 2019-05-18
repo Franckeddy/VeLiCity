@@ -40,9 +40,9 @@ _Track your quality evolution_
 Get a code quality glance at your project and track its quality evolution over time, easily paying back your technical debt.Give an example
 ```
 ## Built With
-* [<img src='http://assets.stickpng.com/thumbs/584816c8cef1014c0b5e4987.png' width='30' />](https://www.jetbrains.com/phpstorm/) - **PhpStorm**, The Lightning-Smart PHP IDE.
+* [<img src='http://www.stickpng.com/assets/images/58482a6bcef1014c0b5e4a14.png' width='30' />
+](https://www.jetbrains.com/webstorm/) - **Webstorm** The Lightning-Smart Javascript IDE.
 * [<img src='https://upload.wikimedia.org/wikipedia/commons/0/03/Fish_shell_logo_ascii.png' width='30' />](https://fishshell.com/) - **Fish**, Command line shell for Linux, macOS, and the rest of the family. 
-
 ## Versioning
 [<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1200px-Octicons-mark-github.svg.png' width='30' />
 ](https://github.com/) - **Github**, Web-based version-control and collaboration platform for software developers.
