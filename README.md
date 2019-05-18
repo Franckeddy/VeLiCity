@@ -1,5 +1,5 @@
-# Design an interactive bike rental map
-
+# VeLiCity 
+## Design an interactive bike rental map
 
 ##### <img src='https://raw.github.com/voodootikigod/logo.js/master/specific-uses/badge_js-strict.png' width='50'/>
 
