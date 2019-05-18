@@ -1,7 +1,7 @@
 # VeLiCity [![Codacy Badge](https://api.codacy.com/project/badge/Grade/82ae76253256496cb03ed0cceafeeec5)](https://app.codacy.com/app/Franckeddy/VeLiCity?utm_source=github.com&utm_medium=referral&utm_content=Franckeddy/VeLiCity&utm_campaign=Badge_Grade_Dashboard)
 
-## Design an interactive bike rental map
 
+## <img src='https://raw.github.com/voodootikigod/logo.js/master/specific-uses/badge_js-strict.png' width='20' /> Design an interactive bike rental map
 
      Google MAPS API / OpenData ville de Paris API / Web Storage 
 
@@ -27,7 +27,7 @@ TECHNICAL CONSTRAINTS
 
 ## Coding style tests 
 
-**[<img src='https://avatars1.githubusercontent.com/u/1834093?s=200&v=4' width='50'/>
+**[<img src='https://avatars1.githubusercontent.com/u/1834093?s=200&v=4' width='30'/>
 ](https://app.codacy.com/)** 
 **Codacy** is an automated code analysis/quality tool that helps developers ship better software, faster. With Codacy, you get static analysis, cyclomatic complexity, duplication and code unit test coverage changes in every commit and pull request.
 
@@ -41,15 +41,12 @@ _Track your quality evolution_
 Get a code quality glance at your project and track its quality evolution over time, easily paying back your technical debt.Give an example
 ```
 ## Built With
-[<img src='http://resources.jetbrains.com/storage/products/webstorm/img/meta/webstorm_logo_300x300.png' width='50' />
+[<img src='http://resources.jetbrains.com/storage/products/webstorm/img/meta/webstorm_logo_300x300.png' width='30' />
 ](https://www.jetbrains.com/webstorm/) - **Webstorm** The Lightning-Smart Javascript IDE.
 
 ## Versioning
-[<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1200px-Octicons-mark-github.svg.png' width='50' />
+[<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1200px-Octicons-mark-github.svg.png' width='30' />
 ](https://github.com/) - **Github**, Web-based version-control and collaboration platform for software developers.
-
-## URL
-* 
 
 ## Authors
 
