@@ -1,4 +1,4 @@
-# VeLiCity [![Codacy Badge](https://api.codacy.com/project/badge/Grade/82ae76253256496cb03ed0cceafeeec5)](https://app.codacy.com/app/Franckeddy/VeLiCity?utm_source=github.com&utm_medium=referral&utm_content=Franckeddy/VeLiCity&utm_campaign=Badge_Grade_Dashboard)
+# VeLiCity [![Codacy Badge](https://api.codacy.com/project/badge/Grade/82ae76253256496cb03ed0cceafeeec5)](https://app.codacy.com/app/Franckeddy/VeLiCity?utm_source=github.com&utm_medium=referral&utm_content=Franckeddy/VeLiCity&utm_campaign=Badge_Grade_Dashboard) [![codecov](https://codecov.io/gh/Franckeddy/VeLiCity/branch/master/graph/badge.svg)](https://codecov.io/gh/Franckeddy/VeLiCity)
 
 ## <img src='https://raw.github.com/voodootikigod/logo.js/master/specific-uses/badge_js-strict.png' width='20' /> Design an interactive bike rental map
 
@@ -40,7 +40,7 @@ _Track your quality evolution_
 Get a code quality glance at your project and track its quality evolution over time, easily paying back your technical debt.Give an example
 ```
 ## Built With
-* [<img src='http://www.stickpng.com/assets/images/58482a6bcef1014c0b5e4a14.png' width='30' />
+* [<img src='https://i1.wp.com/crackedtool.info/wp-content/uploads/2018/12/webstorm_logo_300x300.png?fit=300%2C300' width='30' />
 ](https://www.jetbrains.com/webstorm/) - **Webstorm** The Lightning-Smart Javascript IDE.
 * [<img src='https://upload.wikimedia.org/wikipedia/commons/0/03/Fish_shell_logo_ascii.png' width='30' />](https://fishshell.com/) - **Fish**, Command line shell for Linux, macOS, and the rest of the family. 
 ## Versioning
