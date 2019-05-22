@@ -2,9 +2,147 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="Site de location de vélo">
+    <meta name="author" content="Franck Garçon">
+    <title>Velo Libre City-service</title>
+    <link rel="shortcut icon" type="image/icon" href="./img/logo/bike.png">
+    <!-- Feuilles de style -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
 
+                    <header> <!-- Header de la 1ére Section -->
+                        <!-- Logo FontAwesome + titre header -->
+                        <span class="fa fa-bicycle"></span>
+                        <h1>Location de VéLiCity'</h1>
+                    </header> <!-- /Header de la 1ére Section -->
+                    <p id="welcomeText">Bienvenue sur le site de location de Vélo en Libre service de la ville de
+                        Paris </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="card">
+                <div class="card-body">
+                    <header> <!-- Header de la 2éme Section -->
+                        <!-- Logo FontAwesome + titre header -->
+                        <span class="fa fa-question-circle"></span>
+                        <h1>Fonctionnement du service</h1>
+                    </header> <!-- /Header de la 2éme Section -->
+                    <!-- Explication sur le fonctionnement du service par un diaporama -->
+                    <div id="diaporama">
+                        <button id="bouttonGauche"><span class="chevron left"></span></button>
+                        <!-- Bouton de navigation droite -->
+                        <!-- Div caroussel -->
+                        <div id="caroussel">
+                            <!-- 1ére image -->
+                            <figure class="item">
+                                <img src="">
+                                <figcaption> <!-- Légende -->
+                                    Choisissez votre station sur la carte
+                                </figcaption><!-- /Légende -->
+                            </figure> <!-- /1ére image -->
+                            <!-- 2éme image -->
+                            <figure class="item">
+                                <img src="" alt="">
+                                <figcaption>
+                                    Vérifier l'état de la station ainsi que le nombre de vélos disponibles et cliquez
+                                    sur le
+                                    bouton
+                                    de
+                                    réservation
+                                </figcaption>
+                            </figure> <!-- /2éme image -->
+                            <!-- 3éme image -->
+                            <figure class="item">
+                                <img src="">
+                                <figcaption> <!-- Légende -->
+                                    Apposez votre signature dans le cadre puis "Valider"
+                                </figcaption> <!-- /Légende -->
+                            </figure> <!-- /3éme image -->
+                            <!-- 4éme image -->
+                            <figure class="item">
+                                <img src="" alt="">
+                                <figcaption> <!-- Légende -->
+                                    Votre réservation est prise en compte immédiatement pour une durée de 20 minutes
+                                </figcaption> <!-- /Légende -->
+                            </figure> <!-- /4éme image -->
+                            <!-- 5éme image -->
+                            <figure class="item">
+                                <img src="" alt="">
+                                <figcaption> <!-- Légende -->
+                                    Le site de location de VéLiCity' vous souhaite une bonne
+                                    journée
+                                </figcaption> <!-- /Légende -->
+                            </figure> <!-- /5éme image -->
+                        </div> <!-- /Div caroussel -->
+                        <button id="bouttonDroit"><span class="chevron right"></span></button>
+                        <!-- Bouton de navigation gauche -->
+                    </div> <!-- /Diaporama -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <section> <!-- 3éme section "Location de VéLiCity" -->
+        <header> <!-- Header de la 3éme Section -->
+            <!-- Logo FontAwesome + titre header -->
+            <span class="fa fa-compass"></span>
+            <h1>Louer votre VéLiCity'</h1>
+        </header> <!-- /Header de la 3éme Section -->
+        <article>
+            <div id="carte"></div> <!-- Div de la carte Google Maps -->
+            <div id="infoStation"> <!-- Cadre informations sur la station sélectionnée -->
+                <h1>Informations sur la station :</h1>
+                <!-- Informations sur la station sélectionnée -->
+                <ul id="listeInfo">
+                    <li>Nom : <span id="nomStation"> <!-- Nom inséré en Javascript --> </span></li>
+                    <li>Adresse : <span id="adresseStation"> <!-- Adresse insérer en Javascript --> </span></li>
+                    <li>Etat : <span id="etatStation"> <!-- État inséré en Javascript --> </span></li>
+                    <li>Vélos disponibles : <span id="veloDispo"> <!-- Nombre inséré en Javascript --> </span></li>
+                    <li>Points d'attache disponibles : <span
+                            id="attacheDispo"> <!-- Nombre inséré en Javascript --> </span>
+                    </li>
+                </ul>
+                <!-- /Informations sur la station sélectionnée -->
+                <div id="streetView"></div> <!-- Div vue Street View -->
+                <p id="bouttonReservation">
+                    <button>Réserver</button>
+                </p> <!-- Bouton de réservation -->
+                <p id="messageErreur" class="message">La réservation est impossible à cette station</p>
+                <!-- Message d'erreur en cas de réservation impossible -->
+            </div> <!-- /Cadre informations sur la station sélectionnée -->
+        </article>
+    </section> <!-- /3éme section "Location de VéLiCity" -->
+    <!-- Message affiché lors d'une réservation -->
+    <div id="messageConfirmationLocation" class="message">
+        Votre réservation est bien enregistrer
+    </div> <!-- /Message affiché lors d'une réservation -->
+    <!-- Message affiché lors de l'annulation d'une réservation -->
+    <div id="annulationReservation" class="message">
+        Réservation annuler
+    </div> <!-- /Message affiché lors de l'annulation d'une réservation -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</div>
 </body>
 </html>

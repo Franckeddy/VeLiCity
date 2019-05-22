@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* --   HEADER   -- */
+header {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #00194d, #fff);
+    padding-left: 5%;
+    color: #fff; /* Couleur de titre */
+}
+
+.fa {
+    color: #fff;
+}
+
+header h1 {
+    padding: 21px 0;
+    margin-left: 20px;
+    font-size: 3vh;
+}
+
+header span.fa {
+    font-size: 3em;
+}
+
+#welcomeText {
+    padding: 10px 5px;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+}
