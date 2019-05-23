@@ -6,9 +6,21 @@
 body {
     width: 100%;
     font-family: 'Open Sans', sans-serif;
+    margin: 1em;
+    padding: 1em;
+    background-color: whitesmoke;
 }
 
-/* --   HEADER   -- */
+main {
+    margin: 1em;
+    padding: 1em;
+}
+
+.card{
+    margin-bottom: 1em;
+}
+
+/******* header *******/
 header {
     display: flex;
     align-items: center;
@@ -37,3 +49,240 @@ header span.fa {
     font-weight: 700;
     text-align: center;
 }
+
+/******* header / menu *******/
+#logo {
+    position: fixed;
+    top: 20px;
+    right: 80px;
+    display: block;
+    z-index: 20;
+}
+i {
+    color: #002c9c;
+}
+.open {
+    position: fixed;
+    top: 10px;
+    right: 25px;
+    width: 35px;
+    height: 30px;
+    display: block;
+    cursor: pointer;
+    z-index: 10;
+    transition: opacity 0.2s linear;
+}
+.open span {
+    display: block;
+    float: left;
+    clear: both;
+    height: 4px;
+    width: 35px;
+    border-radius: 40px;
+    background-color: black;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+.open span:nth-child(1) {
+    margin-top: 10px;
+    z-index: 9;
+}
+.open span:nth-child(2) {
+    margin-top: 25px;
+}
+.open span:nth-child(3) {
+    margin-top: 40px;
+}
+.sub-menu {
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    height: 0;
+    width: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    background-color: rgba(218, 218, 218, 0.6);
+    border-radius: 50%;
+    z-index: 18;
+    overflow: hidden;
+}
+.sub-menu li {
+    font-weight: bold;
+    display: block;
+    float: right;
+    clear: both;
+    height: auto;
+    margin-right: -160px;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.sub-menu li:first-child {
+    margin-top: 180px;
+}
+.sub-menu li:nth-child(1) {
+    transition-delay: 0.05s;
+}
+.sub-menu li:nth-child(2) {
+    transition-delay: 0.1s;
+}
+.sub-menu li:nth-child(3) {
+    transition-delay: 0.15s;
+}
+.sub-menu li:nth-child(4) {
+    transition-delay: 0.2s;
+}
+.sub-menu li:nth-child(5) {
+    transition-delay: 0.25s;
+}
+
+.sub-menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    width: 100%;
+    display: block;
+    float: left;
+    line-height: 40px;
+}
+.sub-menu li a:hover {
+    color: rgb(86, 152, 198);
+}
+.oppenned .sub-menu {
+    opacity: 1;
+    height: 400px;
+    width: 400px;
+}
+.oppenned span:nth-child(2) {
+    overflow: visible;
+}
+.oppenned span:nth-child(1),
+.oppenned span:nth-child(3) {
+    z-index: 100;
+    transform: rotate(45deg);
+}
+.oppenned span:nth-child(1) {
+    transform: rotate(45deg) translateY(12px) translateX(12px);
+}
+.oppenned span:nth-child(2) {
+    height: 400px;
+    width: 400px;
+    right: -160px;
+    top: -160px;
+    border-radius: 50%;
+    background-color: rgba(88, 88, 88, 0.9);
+}
+.oppenned span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-10px) translateX(10px);
+}
+.oppenned li {
+    margin-right: 168px;
+}
+
+
+/******* Diaporama *******/
+#diaporama {
+    position: relative;
+    width: 40%;
+    min-width: 320px; /* Le diaporama gardera une taille minimum de 320px */
+    margin: 2% auto; /* Centre le diaporama */
+}
+
+#caroussel {
+    position: relative;
+    width: 85%;
+    height: 31vh; /* Une hauteur en vh permet de garder le diaporama en bonne hauteur sur chaque résolution */
+    margin: 0 auto;
+    border: 10px solid #c0c0c0;
+    border-radius: 8px;
+}
+
+#caroussel figure {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 2s;
+}
+
+#caroussel figure + figure {
+    opacity: 0; /* Fait disparaître toutes les images sauf la première */
+}
+
+#caroussel figure img {
+    width: 100%;
+    height: 100%;
+}
+
+#caroussel figcaption {
+    position: absolute;
+    left: 0; right: 0; /* La légende occupera toute la largeur de l'image */
+    background-color: rgba(0, 0, 0, 0.5); /* Fond noir transparent */
+    color: #fff;
+    font-size: 3vh;
+    font-weight: 600;
+    text-align: center;
+}
+
+/*-- Placement des différentes légendes sur son image --*/
+#caroussel figure:nth-child(1) figcaption {
+    top: 20%; /* 1ére légende */
+}
+
+#caroussel figure:nth-child(2) figcaption {
+    top: 30%; /* 2éme légende */
+}
+
+#caroussel figure:nth-child(3) figcaption {
+    top: 40%; /* 3éme légende */
+}
+
+#caroussel figure:nth-child(4) figcaption {
+    top: 20%; /* 4éme légende */
+}
+
+#caroussel figure:nth-child(5) figcaption {
+    top: 20%; /* 5éme légende */
+}
+
+#diaporama button {
+    position: absolute;
+    top: 45%; /* Placement des boutons au centre du diaporama */
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.8); /* Couleur de fond des boutons */
+    border: none;
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#bouttonDroit {
+    right: -9%; /* Placement du bouton droit */
+}
+
+#bouttonGauche {
+    left: -9%; /* Placement du bouton gauche */
+}
+
+.chevron::before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    border-style: solid;
+    border-width: 0.25em 0.25em 0 0; /* 2 Bordures pour le chevron */
+    top: 0.15em;
+}
+
+.chevron.right:before {
+    left: -0.15em;
+    transform: rotate(45deg); /* Rotation de 45 degré */
+}
+
+.chevron.left:before {
+    left: 0.25em;
+    transform: rotate(-135deg); /* Rotation de -135 degré */
+}
+
