@@ -15,3 +15,5 @@ for (let i = 0; i < fas.length; i++) {
         }, 1000)
     })(fas[i])
 }
+
+// pour l'instant ne fonctionne pas sur ce que je veux !!!!!!
