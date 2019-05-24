@@ -25,6 +25,10 @@ header {
 
 .fa {
     color: #fff;
+    transition: color 1s;
+}
+.blue {
+    color: #5698c6;
 }
 
 header h1 {
@@ -53,7 +57,7 @@ header span.fa {
     z-index: 20;
 }
 i {
-    color: #002c9c;
+    color: #fff;
 }
 .open {
     position: fixed;
@@ -252,11 +256,11 @@ i {
 }
 
 #bouttonDroit {
-    right: -9%; /* Placement du bouton droit */
+    right: -9%;
 }
 
 #bouttonGauche {
-    left: -9%; /* Placement du bouton gauche */
+    left: -9%;
 }
 
 .chevron::before {
@@ -266,7 +270,7 @@ i {
     height: 1em;
     width: 1em;
     border-style: solid;
-    border-width: 0.25em 0.25em 0 0; /* 2 Bordures pour le chevron */
+    border-width: 0.25em 0.25em 0 0;
     top: 0.15em;
 }
 

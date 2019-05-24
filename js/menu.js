@@ -1,13 +1,9 @@
 $ (document).ready (function () {
-    $ (document).delegate ('.open', 'click', function (event) {
+    $ (document).delegate ('.open', 'mouseover', function (event) {
         $ (this).addClass ('oppenned');
         event.stopPropagation ();
     });
-    $ (document).delegate ('body', 'click', function () {
+    $ (document).delegate ('body', 'mouseout', function () {
         $ ('.open').removeClass ('oppenned');
-    });
-    $ (document).delegate ('.cls', 'click', function (event) {
-        $ ('.open').removeClass ('oppenned');
-        event.stopPropagation ();
     });
 });
