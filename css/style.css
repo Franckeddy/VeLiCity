@@ -168,7 +168,7 @@ i {
     right: -160px;
     top: -160px;
     border-radius: 50%;
-    background-color: rgba(88, 88, 88, 0.9);
+    background-color: rgba(227, 239, 51, 0.9);
 }
 .oppenned span:nth-child(3) {
     transform: rotate(-45deg) translateY(-10px) translateX(10px);
