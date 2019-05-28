@@ -12,6 +12,7 @@ main {
 
 .card {
     margin-bottom: 1em;
+    height: 350px;
 }
 
 /******* header *******/
@@ -20,7 +21,7 @@ header {
     align-items: center;
     background-image: linear-gradient(to bottom, #00194d, #fff);
     padding-left: 5%;
-    color: #fff; /* Couleur de titre */
+    color: #fff;
 }
 
 .fa {
@@ -205,14 +206,14 @@ i {
 #diaporama {
     position: relative;
     width: 40%;
-    min-width: 320px; /* Le diaporama gardera une taille minimum de 320px */
-    margin: 2% auto; /* Centre le diaporama */
+    min-width: 320px;
+    margin: 2% auto;
 }
 
 #caroussel {
     position: relative;
-    width: 85%;
-    height: 31vh; /* Une hauteur en vh permet de garder le diaporama en bonne hauteur sur chaque résolution */
+    width: 90%;
+    height: 33vh;
     margin: 0 auto;
     border: 10px solid #c0c0c0;
     border-radius: 8px;
@@ -226,7 +227,7 @@ i {
 }
 
 #caroussel figure + figure {
-    opacity: 0; /* Fait disparaître toutes les images sauf la première */
+    opacity: 0;
 }
 
 #caroussel figure img {
@@ -237,15 +238,14 @@ i {
 #caroussel figcaption {
     position: absolute;
     left: 0;
-    right: 0; /* La légende occupera toute la largeur de l'image */
-    background-color: rgba(0, 0, 0, 0.5); /* Fond noir transparent */
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     font-size: 3vh;
     font-weight: 600;
     text-align: center;
 }
 
-/*-- Placement des différentes légendes sur son image --*/
 #caroussel figure:nth-child(1) figcaption {
     top: 20%; /* 1ére légende */
 }
@@ -268,9 +268,9 @@ i {
 
 #diaporama button {
     position: absolute;
-    top: 45%; /* Placement des boutons au centre du diaporama */
+    top: 45%;
     z-index: 2;
-    background-color: rgba(0, 0, 0, 0.8); /* Couleur de fond des boutons */
+    background-color: rgba(0, 0, 0, 0.8);
     border: none;
     color: #fff;
     height: 40px;

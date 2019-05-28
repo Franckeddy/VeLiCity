@@ -8,19 +8,19 @@
 
      Automatic and controllable POO slider, conversion to JQuery plugin to find ds dedicated repo 
 
-DIAPORAMA
+## Diaporama
 
      The home page of the application will display a slideshow of photos and text explaining the operation of the application. This slide show also reacts to the keyboard with the left and right keys to move back and forward manually.
 
-CARD OF BIKES 
+## Card of bike 
 
      Below the slide show is a map using the GoogleMaps API with the location of all bike stations, positioned using markers. A click on a marker displays the status of the station in a panel built in HTML and CSS next to the Google Maps. The location and status of each station (open, under construction, how many bikes and places are available, etc.) is provided via an OpenData API of the city of Paris. The data must come from this API.
 
-BOOKING BIKES 
+## Booking bike 
 
      It must be possible to book an available bike at the selected station by signing into a free field implemented using the HTML5 Canvas API. Once the signature is validated, a bike is marked as reserved for this station. For this project, the reservation will have no effect. Only the browser browser 'hold' that the bike has been reserved. The reservation data will be stored in the browser using the HTML5 Web Storage API and displayed in a footer below the panel. The reservation expires automatically after 20 minutes and also when the web browser closes. The footer permanently displays the status of the reservation (if there is one), with a dynamic count of the time remaining before the reservation expires. There can only be one reservation at a time. If a new reservation takes place, it replaces the previous one.
 
-TECHNICAL CONSTRAINTS 
+## Technical constraints 
 
      You can use the jQuery library but no jQuery plugins. You will develop the entire slideshow yourself. The JavaScript code must be entirely designed in object-oriented programming. The code must use the Google Maps APIs and open data APIs of the city of Paris. It must also use the Web Storage and Canvas APIs. 
 
