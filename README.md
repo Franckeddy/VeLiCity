@@ -2,7 +2,7 @@
 
 ## <img src='https://raw.github.com/voodootikigod/logo.js/master/specific-uses/badge_js-strict.png' width='20' /> Design an interactive bike rental map
 
-     Google MAPS API / OpenData ville de Paris API / Web Storage 
+     Google MAPS API / OpenData ville de Nancy API / Web Storage 
 
      Use Canvas, touch compatibility on smartphone and tablet 
 
