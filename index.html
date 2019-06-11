@@ -32,9 +32,9 @@
             <span>
 				<ul class="sub-menu ">
 					<li> <a href="#home"><i class="fa fa-home" style="font-size:18px"></i> Accueil</a> </li>
-					<li> <a href="#map"><i class="fa fa-bicycle"
-                                           style="font-size:20px"></i> Louer un Vélo</a> </li>
-					<li> <a href="#Reservation"><i class="far fa-calendar-check" style="font-size:20px"></i> Mes Réservations</a> </li>
+					<li> <a href="#map_container"><i class="fa fa-bicycle"
+                                                     style="font-size:20px"></i> Louer un Vélo</a> </li>
+					<li> <a href="#form_confirm"><i class="far fa-calendar-check" style="font-size:20px"></i> Mes Réservations</a> </li>
 				</ul>
 			</span>
             <span class="cls"></span>
@@ -77,14 +77,14 @@
                                 <div id="caroussel">
                                     <!-- 1ére image -->
                                     <figure class="item">
-                                        <img src="img/4.jpg" alt="">
+                                        <img src="img/1.jpg" alt="">
                                         <figcaption>
                                             Choisissez votre station sur la carte
                                         </figcaption>
                                     </figure>
                                     <!-- 2éme image -->
                                     <figure class="item">
-                                        <img src="img/1.jpg" alt="">
+                                        <img src="img/2.jpg" alt="">
                                         <figcaption>
                                             Vérifier le nombre de vélos disponibles et
                                             cliquez
@@ -96,7 +96,7 @@
                                     </figure>
                                     <!-- 3éme image -->
                                     <figure class="item">
-                                        <img src="img/2.jpg" alt="">
+                                        <img src="img/6.jpg" alt="">
                                         <figcaption>
                                             Apposez votre signature dans le cadre puis "Valider"
                                         </figcaption>
@@ -111,7 +111,7 @@
                                     </figure>
                                     <!-- 5éme image -->
                                     <figure class="item">
-                                        <img src="img/4.jpg" alt="">
+                                        <img src="img/logo/City.png" alt="">
                                         <figcaption>
                                             Le site de location de VéLiCity' vous souhaite une bonne
                                             journée
@@ -127,56 +127,66 @@
                 </div>
             </div>
             <!-- 3éme section "Location de VéLiCity" -->
-            <section id="map">
+            <section id="map_container">
                 <!-- Header de la 3éme Section -->
                 <header>
                     <span class="fa fa-compass"></span>
                     <h1>Louer votre VéLiCity'</h1>
                 </header>
                 <!-- /Header de la 3éme Section -->
-                <article>
-                    <div id="mapid"></div>
-                    <div id="infoStation"> <!-- Cadre informations sur la station sélectionnée -->
-                        <h1>Informations sur la station :</h1>
-                        <!-- Informations sur la station sélectionnée -->
-                        <ul id="listeInfo">
-                            <li>Nom : <span id="nomStation"> <!-- Nom inséré en Javascript --> </span></li>
-                            <li>Adresse : <span id="adresseStation"> <!-- Adresse insérer en Javascript --> </span></li>
-                            <li>Etat : <span id="etatStation"> <!-- État inséré en Javascript --> </span></li>
-                            <li>Vélos disponibles : <span id="veloDispo"> <!-- Nombre inséré en Javascript --> </span>
-                            </li>
-                            <li>Points d'attache disponibles : <span
-                                    id="attacheDispo"> <!-- Nombre inséré en Javascript --> </span>
-                            </li>
+                <div id="map"></div> <!-- Div de la carte -->
+
+                <div id="form_container"> <!-- Div de l'encart de réservation -->
+                    <div id="before_form" class="presentation">
+                        <p id="before_click">Cliquez sur la station de votre choix pour afficher les informations et
+                            réserver votre vélo !</p>
+                        <ul>
+                            <li id="station_verte">Station verte : plus de 10 vélos disponibles</li>
+                            <li id="station_orange">Station orange : moins de 10 vélos disponibles</li>
+                            <li id="station_rouge">Station rouge : aucun vélo disponible</li>
                         </ul>
-                        <!-- /Informations sur la station sélectionnée -->
-                        <div id="streetView"></div> <!-- Div vue Street View -->
-                        <p id="bouttonReservation">
-                            <button>Réserver</button>
-                        </p> <!-- Bouton de réservation -->
-                        <p id="messageErreur" class="message">La réservation est impossible à cette station</p>
-                        <!-- Message d'erreur en cas de réservation impossible -->
-                    </div> <!-- /Cadre informations sur la station sélectionnée -->
-                </article>
+                    </div>
+                    <div id="station_infos">
+                        <p>Adresse : </p>
+                        <p>Nombre de places : </p>
+                        <p>Nombre de vélos disponibles : </p>
+                    </div>
+                    <form id="form_bikes"> <!-- FORMULAIRE method="post" action="formulaire.php" -->
+                        <fieldset>
+                            <legend>Réservez un vélo de cette station</legend>
+                            <label for="name">Votre nom : </label><input type="text" name="name" id="name"
+                                                                         placeholder="Votre nom" required/><br/>
+                            <label for="firstname"> Votre prénom : </label><input type="text" name="firstname"
+                                                                                  id="firstname"
+                                                                                  placeholder="Votre prénom"
+                                                                                  required><br/>
+                            <input type="submit" name="submit" id="reservation" value="Réservez !">
+                        </fieldset>
+                    </form>
+                    <p id="nobikes">Réservation impossible (aucun vélo disponible)</p>
+                </div>
+
+                <div id="canvas_container"> <!-- Div du Canvas -->
+                    <div id="canvas_message">
+                        <h1>Signez dans la case pour confirmer :</h1>
+                    </div>
+                    <div id="canvas_div">
+                        <canvas id="canvas_resa" width="200" height="200">Apposez votre signature (si vous voyez ce
+                            message, votre navigateur n'est pas à jour)
+                        </canvas>
+                    </div>
+                    <div id="canvas_confirm">
+                        <button type="submit" id="submit_canvas">Validez !</button>
+                        <button type="reset" id="clear_canvas">Recommencez</button>
+                    </div>
+                </div>
             </section>
-            <!-- /3éme section "Location de VéLiCity" -->
-            <!-- Message affiché lors d'une réservation -->
-            <div id="messageConfirmationLocation" class="message">
-                Votre réservation est bien enregistrer
-            </div> <!-- /Message affiché lors d'une réservation -->
-            <!-- Message affiché lors de l'annulation d'une réservation -->
-            <div id="annulationReservation" class="message">
-                Réservation annuler
-            </div> <!-- /Message affiché lors de l'annulation d'une réservation -->
-            <!-- Pied de page -->
+            <!--BLOC MESSAGES DE CONFIRMATION / EXPIRATION -->
+            <p id="form_confirm">Vélo réservé à la station <span id="confirm_station">STATION</span> par <span
+                    id="confirm_name">NAME</span><br/>
+                Temps restant : <span id="timer"></span> avant l'expiration de la session</p>
+            <p id="form_exp">Réservation expirée</p>
             <footer>
-                <!-- PArtie réservation -->
-                <section id="Reservation">
-                    <span id="ligneStation"></span><br>
-                    <span id="ligneAdresse"></span><br>
-                    <span id="compteur"></span><br>
-                    <span id="buttonAnnul">Annuler</span>
-                </section>
             </footer>
         </div>
     </main>
@@ -195,9 +205,12 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer="defer"></script>
 <script src="js/main.js"></script>
+<script src="js/canvas.js"></script>
+<script src="js/resa.js"></script>
 <script src="js/menu.js"></script>
 <script src="js/diaporama.js"></script>
-<script src="js/maps.js"></script>
+<script src="js/map.js"></script>
 </body>
 </html>
