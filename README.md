@@ -50,4 +50,3 @@ Get a code quality glance at your project and track its quality evolution over t
 ## Authors
 
 * [**Franck GARCON**](https://github.com/Franckeddy)
-# New-Velicity
