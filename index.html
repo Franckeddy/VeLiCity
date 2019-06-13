@@ -30,12 +30,12 @@
         <div class="open">
             <span class="cls"></span>
             <span>
-				<ul class="sub-menu ">
+				<div class="sub-menu ">
 					<li> <a href="#home"><i class="fa fa-home" style="font-size:18px"></i> Accueil</a> </li>
 					<li> <a href="#map_container"><i class="fa fa-bicycle"
                                                      style="font-size:20px"></i> Louer un Vélo</a> </li>
 					<li> <a href="#form_confirm"><i class="far fa-calendar-check" style="font-size:20px"></i> Mes Réservations</a> </li>
-				</ul>
+				</div>
 			</span>
             <span class="cls"></span>
         </div>
@@ -56,7 +56,29 @@
                                 de
                                 Nancy </p>
                             <!-- mouseover -> notice d'explication en pop-up juste sur la navigation avec le pad ou la souris-->
-                            <p id="notice" style="text-align: center;"><input type="button" value="Notice"></p>
+                            <a href="#modal1" class="js-modal">Consultez la notice</a>
+                            <aside aria-hidden="true" class="modal" id="modal1" aria-labelledby="titlemodal" style="display: none">
+                                <div class="modal-wrapper js-modal-stop">
+                                    <button class="js-modal-close">Fermer la boite</button>
+                                    <h1 id="titlemodal">Diaporama</h1>
+                                    <p>Vous devez afficher en haut de la page un diaporama de photos et de textes
+                                        expliquant le fonctionnement de l'application. La logique du diaporama doit être
+                                        écrite par vos soins. L’utilisation de tout plugin automatisant la logique de
+                                        l’application est proscrite.
+                                        Le diaporama passe automatiquement à la diaporama suivante toutes les 5
+                                        secondes. L’utilisateur peut toutefois choisir de mettre le diaporama en pause.
+                                        Il peut également reculer ou avancer manuellement à l’aide d’un clic de souris,
+                                        ainsi qu’avec les touches gauche et droite de son clavier.</p>
+                                    <h1>Carte des vélos</h1>
+                                    <p>En-­dessous du diaporama se trouve une carte affichant en temps réel la liste des
+                                        stations de location de vélos ainsi que leur disponibilité. La localisation de
+                                        toutes les stations de vélos est affichée à l’aide de marqueurs.
+                                        La localisation et l'état de chaque station (ouverte, en travaux, combien de
+                                        vélos et de places sont disponibles, etc.) est fourni via la plateforme OpenData
+                                        de JC Decaux.
+                                        Les données doivent provenir de l'API temps réel.</p>
+                                </div>
+                            </aside>
                         </div>
                     </div>
                 </div>
@@ -96,14 +118,14 @@
                                     </figure>
                                     <!-- 3éme image -->
                                     <figure class="item">
-                                        <img src="img/6.jpg" alt="">
+                                        <img src="img/7.jpg" alt="">
                                         <figcaption>
                                             Apposez votre signature dans le cadre puis "Valider"
                                         </figcaption>
                                     </figure>
                                     <!-- 4éme image -->
                                     <figure class="item">
-                                        <img src="img/3.jpg" alt="">
+                                        <img src="img/logo/City.png" alt="">
                                         <figcaption>
                                             Votre réservation est prise en compte immédiatement pour une durée de 20
                                             minutes
@@ -165,7 +187,6 @@
                     </form>
                     <p id="nobikes">Réservation impossible (aucun vélo disponible)</p>
                 </div>
-
                 <div id="canvas_container"> <!-- Div du Canvas -->
                     <div id="canvas_message">
                         <h1>Signez dans la case pour confirmer :</h1>
@@ -186,8 +207,8 @@
                     id="confirm_name">NAME</span><br/>
                 Temps restant : <span id="timer"></span> avant l'expiration de la session</p>
             <p id="form_exp">Réservation expirée</p>
-            <footer>
-            </footer>
+<!--            <footer>
+            </footer>-->
         </div>
     </main>
 </div>
@@ -207,6 +228,7 @@
         crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer="defer"></script>
 <script src="js/main.js"></script>
+<script src="js/modal.js"></script>
 <script src="js/canvas.js"></script>
 <script src="js/resa.js"></script>
 <script src="js/menu.js"></script>
