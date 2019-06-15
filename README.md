@@ -1,4 +1,4 @@
-# VeLiCity [![Codacy Badge](https://api.codacy.com/project/badge/Grade/82ae76253256496cb03ed0cceafeeec5)](https://app.codacy.com/app/Franckeddy/VeLiCity?utm_source=github.com&utm_medium=referral&utm_content=Franckeddy/VeLiCity&utm_campaign=Badge_Grade_Dashboard)
+# VeLiCity [![Codacy Badge](https://api.codacy.com/project/badge/Grade/82ae76253256496cb03ed0cceafeeec5)](https://app.codacy.com/app/Franckeddy/VeLiCity?utm_source=github.com&utm_medium=referral&utm_content=Franckeddy/VeLiCity&utm_campaign=Badge_Grade_Dashboard) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Franckeddy/VeLiCity/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Franckeddy/VeLiCity/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/Franckeddy/VeLiCity/badges/build.png?b=master)](https://scrutinizer-ci.com/g/Franckeddy/VeLiCity/build-status/master) 
 
 ## <img src='https://raw.github.com/voodootikigod/logo.js/master/specific-uses/badge_js-strict.png' width='20' /> Design an interactive bike rental map
 
