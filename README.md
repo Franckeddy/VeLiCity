@@ -39,6 +39,21 @@ Codacy adapts to your code review process, pushing results as comments in your p
 _Track your quality evolution_
 Get a code quality glance at your project and track its quality evolution over time, easily paying back your technical debt.Give an example
 ```
+**[<img src='https://rootslabs.net/blog/wp-content/uploads/2014/05/logo_scrutinizer-300x300.png' width='30'/>
+](https://scrutinizer-ci.com/)** 
+**Scrutinizer**  Your platform for software quality management 
+
+The best toolbox for building better software. From continuous integration, and continuous analysis to empowering human code reviews with code intelligence. 
+```
+_Continuous integration_
+Scrutinizer seamlessly integrates into your workflow, and continuously builds and deploys your application.
+
+_Continuous analyse_
+Continuously analyze your code for issues, find bugs, enforce coding-style, track technical debt, and measure progress.
+
+_Code intelligence_
+Read and review code with the power of an IDE without ever leaving your favorite platform.
+```
 ## Built With
 * [<img src='https://i1.wp.com/crackedtool.info/wp-content/uploads/2018/12/webstorm_logo_300x300.png?fit=300%2C300' width='30' />
 ](https://www.jetbrains.com/webstorm/) - **Webstorm** The Lightning-Smart Javascript IDE.
