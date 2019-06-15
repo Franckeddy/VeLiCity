@@ -1,0 +1,156 @@
+/* SECTION MAP */
+
+#map_container { /* container de la map + formulaire + canvas */
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+#map {
+  height: 450px;
+  width: auto;
+  box-sizing: border-box;
+}
+
+#form_container {
+  padding: 10px;
+  margin-top: 5px;
+  width: 50%;
+  max-width: 50%;
+  height: 450px;
+  background-color: #eeeeee;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#before_form { /* encart avant l'apparition du formulaire */
+  text-align: center;
+}
+
+.presentation { /* classe du texte précédant le formulaire */
+  padding: 50px;
+}
+
+#before_form {
+  ul {
+    padding-left: 0;
+  }
+
+  li { /* liste des codes couleurs des marqueurs */
+    font-family: 'Nunito', sans-serif, Arial, Helvetica;
+    font-weight: normal;
+    font-size: 16px;
+    list-style: none;
+    text-align: left;
+    padding-left: 25px;
+    margin-bottom: 30px;
+    position: relative;
+  }
+}
+
+#before_click {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 0;
+}
+
+#station_verte::before {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 50px;
+  background-image: url("https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  margin-left: -55px;
+}
+
+#station_orange::before {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 50px;
+  background-image: url("https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  margin-left: -55px;
+}
+
+#station_rouge::before {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 50px;
+  background-image: url("https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  margin-left: -55px;
+}
+
+#station_infos {
+  display: none;
+  margin-top: 35px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  p {
+    padding-left: 8px;
+  }
+}
+
+@media all and (min-width: 1367px) {
+  /* responsive écrans HD */
+  #map_container {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 50px;
+  }
+
+  #form_container {
+    max-width: 40%;
+  }
+}
+
+@media all and (max-width: 992px) {
+  /* responsive écrans tablette (768px-992px) */
+  #map {
+    width: 60%;
+  }
+
+  #map_container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #form_container {
+    width: 40%;
+    height: auto;
+    max-width: 60%;
+  }
+
+  .presentation {
+    padding: 40px 30px 30px 30px;
+  }
+
+  #before_form li {
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 768px) {
+  /* responsive grands smartphones (576px-768px) */
+  #map {
+    width: 100%;
+  }
+
+  #form_container {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media all and (max-width: 576px) {
+  /* responsive smartphones (320px-576px) */
+  #map {
+    height: 300px;
+  }
+}

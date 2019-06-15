@@ -1,0 +1,104 @@
+/* SECTION CANVAS */
+
+#canvas_container { /* container de présentation + canvas + submit */
+  float: right;
+  width: 50%;
+  height: 450px;
+  margin-top: -450px;
+  padding: 10px;
+  background-color: #eeeeee;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#canvas_message { /* consigne expliquant le canvas */
+  background-image: linear-gradient(to bottom, #00194d, #fff);
+  flex-wrap: wrap;
+  height: 20%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+#canvas_message h1 {
+  color: #fff;
+  padding: 21px 0;
+  margin-left: 20px;
+  font-size: 3vh;
+}
+
+
+#canvas_div { /* div enveloppant le canvas */
+  background-color: #eeeeee;
+  box-sizing: border-box;
+  border-bottom: 6px solid #eeeeee;
+  margin: 0;
+  width: 100%;
+  height: 60%;
+  cursor: crosshair;
+}
+
+#canvas_resa { /* canvas */
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+#canvas_confirm { /* boutons submit + clear */
+  border-top: 5px solid #eeeeee;
+  height: 20%;
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+
+#clear_canvas { /* remise à zéro du canvas */
+  cursor: pointer;
+  padding: 10px 15px 10px 15px;
+  border: 1px solid #00194d;
+  border-radius: 3px;
+  background-color: white;
+  font-size: 15px;
+}
+
+#submit_canvas { /* submit du canvas */
+  cursor: pointer;
+  padding: 10px 15px 10px 15px;
+  border: none;
+  border-radius: 3px;
+  background-color: #00194d;
+  font-size: 15px;
+  color: #fff;
+}
+
+#submit_canvas:hover {
+  background-color: rgba(0, 29, 100, 0.6);
+}
+
+footer {
+  background-color: grey;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 5px 20px 0 20px;
+}
+
+footer p:first-child {
+  margin-right: 20px;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}

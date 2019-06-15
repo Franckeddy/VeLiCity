@@ -2,7 +2,7 @@ class CanvasClass {
     constructor(canvasDiv, canvas) {
         this.canvasDiv = $(canvasDiv);
         this.canvas = $(canvas);
-        this.ctx = this.canvas[0].getContext("2d");
+        this.ctx = this.canvas[0].getContext("2d"); // définir le contexte à plat
         this.topCanvas = this.canvas[0].getBoundingClientRect().top; // pixels par rapport au haut de la page
         this.leftCanvas = this.canvas[0].getBoundingClientRect().left; // pixels par rapport au coin gauche de la page
         this.x = this.leftCanvas; // position initiale = left 0 du canvas

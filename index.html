@@ -7,7 +7,7 @@
     <meta property="og:type" content="website"/>
     <meta property="og:url" content=""/>
     <meta property="og:image" content="img/logo/City.png"/>
-    <meta property="og:description" content="Location de vélos Nancy "/>
+    <meta property="og:description" content="Location de vélos Nancy"/>
     <meta name="description" content="Site de location de vélos Nancy">
     <meta name="author" content="Franck Garçon">
     <title>VéLiCity</title>
@@ -19,13 +19,11 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
           integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
           crossorigin=""/>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/app.css"> <!-- compilation de style.scss -->
 </head>
 <body>
 <div class="container">
-    <!-- En-tête de la page / navigation -->
     <header>
-        <!-- Menu hamburger -->
         <img id="logo" src="img/logo/City.png" alt="logo VéLioCity"/>
         <div class="open">
             <span class="cls"></span>
@@ -46,18 +44,19 @@
                 <div class="col-sm-4">
                     <div class="card">
                         <div class="card-body">
-                            <!-- Header de la 1ére Section -->
                             <header>
                                 <span class="fa fa-bicycle"></span>
                                 <h1>Service VéLiCity'</h1>
                             </header>
-                            <!-- /Header de la 1ére Section -->
                             <p id="welcomeText">Bienvenue sur le site de location de Vélo en Libre service de la ville
                                 de
                                 Nancy </p>
-                            <!-- mouseover -> notice d'explication en pop-up juste sur la navigation avec le pad ou la souris-->
-                            <a href="#modal1" class="js-modal">Consultez la notice</a>
-                            <aside aria-hidden="true" class="modal" id="modal1" aria-labelledby="titlemodal" style="display: none">
+                            <div class="js-modal">
+                                <!-- mouseover -> notice d'explication en pop-up juste sur la navigation avec le pad ou la souris-->
+                                <a href="#modal1">Consultez la notice</a>
+                            </div>
+                            <aside aria-hidden="true" class="modal" id="modal1" aria-labelledby="titlemodal"
+                                   style="display: none">
                                 <div class="modal-wrapper js-modal-stop">
                                     <button class="js-modal-close">Fermer la boite</button>
                                     <h1 id="titlemodal">Diaporama</h1>
@@ -85,17 +84,13 @@
                 <div class="col-sm-8">
                     <div class="card">
                         <div class="card-body">
-                            <!-- Header de la 2éme Section -->
                             <header>
                                 <span class="fa fa-question-circle"></span>
                                 <h1>Fonctionnement du service</h1>
                             </header>
-                            <!-- /Header de la 2éme Section -->
                             <!-- Explication sur le fonctionnement du service par un diaporama -->
                             <div id="diaporama">
                                 <button id="bouttonGauche"><span class="chevron left"></span></button>
-                                <!-- Bouton de navigation droite -->
-                                <!-- Div caroussel -->
                                 <div id="caroussel">
                                     <!-- 1ére image -->
                                     <figure class="item">
@@ -138,77 +133,78 @@
                                             Le site de location de VéLiCity' vous souhaite une bonne
                                             journée
                                         </figcaption>
-                                    </figure> <!-- /5éme image -->
+                                    </figure>
                                 </div>
-                                <!-- /Div caroussel -->
                                 <button id="bouttonDroit"><span class="chevron right"></span></button>
-                                <!-- Bouton de navigation gauche -->
-                            </div> <!-- /Diaporama -->
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- 3éme section "Location de VéLiCity" -->
-            <section id="map_container">
-                <!-- Header de la 3éme Section -->
-                <header>
-                    <span class="fa fa-compass"></span>
-                    <h1>Louer votre VéLiCity'</h1>
-                </header>
-                <!-- /Header de la 3éme Section -->
-                <div id="map"></div> <!-- Div de la carte -->
+            <div class="card-1">
+                <div class="card-body">
+                    <section id="map_container">
+                        <header>
+                            <span class="fa fa-compass"></span>
+                            <h1>Louer votre VéLiCity'</h1>
+                        </header>
+                        <div id="map"></div>
+                        <div id="form_container">
+                            <div id="before_form" class="presentation">
+                                <h3 id="before_click">Cliquez sur la station de votre choix pour afficher les
+                                    informations et
+                                    réserver votre vélo !</h3>
+                                <ul>
+                                    <li id="station_verte">Station verte : plus de 10 vélos disponibles</li>
+                                    <li id="station_orange">Station orange : moins de 10 vélos disponibles</li>
+                                    <li id="station_rouge">Station rouge : aucun vélo disponible</li>
+                                </ul>
+                            </div>
+                            <div id="station_infos">
+                                <p>Adresse : </p>
+                                <p>Nombre de places : </p>
+                                <p>Nombre de vélos disponibles : </p>
+                            </div>
+                            <form id="form_bikes">
+                                <fieldset>
+                                    <legend>Réservez un vélo de cette station</legend>
+                                    <label for="name">Votre nom : </label><input type="text" name="name" id="name"
+                                                                                 placeholder="Votre nom" required/><br/>
+                                    <label for="firstname"> Votre prénom : </label><input type="text" name="firstname"
+                                                                                          id="firstname"
+                                                                                          placeholder="Votre prénom"
+                                                                                          required><br/>
+                                    <input type="submit" name="submit" id="reservation" value="Réservez !">
+                                </fieldset>
+                            </form>
+                            <p id="nobikes">Réservation impossible (aucun vélo disponible)</p>
+                        </div>
+                        <div id="canvas_container">
+                            <div id="canvas_message">
+                                <h1>Signez dans la case pour confirmer :</h1>
+                            </div>
+                            <div id="canvas_div">
+                                <canvas id="canvas_resa" width="200" height="200">Apposez votre signature (si vous voyez
+                                    ce
+                                    message, votre navigateur n'est pas à jour)
+                                </canvas>
+                            </div>
+                            <div id="canvas_confirm">
+                                <button type="submit" id="submit_canvas">Validez !</button>
+                                <button type="reset" id="clear_canvas">Recommencez</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!--BLOC MESSAGES DE CONFIRMATION / EXPIRATION -->
+                <p id="form_confirm">Vélo réservé à la station <span id="confirm_station">STATION</span> par <span
+                        id="confirm_name">NAME</span><br/>
+                    Temps restant : <span id="timer"></span> avant l'expiration de la session</p>
+                <p id="form_exp">Réservation expirée</p>
+            </div>
 
-                <div id="form_container"> <!-- Div de l'encart de réservation -->
-                    <div id="before_form" class="presentation">
-                        <p id="before_click">Cliquez sur la station de votre choix pour afficher les informations et
-                            réserver votre vélo !</p>
-                        <ul>
-                            <li id="station_verte">Station verte : plus de 10 vélos disponibles</li>
-                            <li id="station_orange">Station orange : moins de 10 vélos disponibles</li>
-                            <li id="station_rouge">Station rouge : aucun vélo disponible</li>
-                        </ul>
-                    </div>
-                    <div id="station_infos">
-                        <p>Adresse : </p>
-                        <p>Nombre de places : </p>
-                        <p>Nombre de vélos disponibles : </p>
-                    </div>
-                    <form id="form_bikes"> <!-- FORMULAIRE method="post" action="formulaire.php" -->
-                        <fieldset>
-                            <legend>Réservez un vélo de cette station</legend>
-                            <label for="name">Votre nom : </label><input type="text" name="name" id="name"
-                                                                         placeholder="Votre nom" required/><br/>
-                            <label for="firstname"> Votre prénom : </label><input type="text" name="firstname"
-                                                                                  id="firstname"
-                                                                                  placeholder="Votre prénom"
-                                                                                  required><br/>
-                            <input type="submit" name="submit" id="reservation" value="Réservez !">
-                        </fieldset>
-                    </form>
-                    <p id="nobikes">Réservation impossible (aucun vélo disponible)</p>
-                </div>
-                <div id="canvas_container"> <!-- Div du Canvas -->
-                    <div id="canvas_message">
-                        <h1>Signez dans la case pour confirmer :</h1>
-                    </div>
-                    <div id="canvas_div">
-                        <canvas id="canvas_resa" width="200" height="200">Apposez votre signature (si vous voyez ce
-                            message, votre navigateur n'est pas à jour)
-                        </canvas>
-                    </div>
-                    <div id="canvas_confirm">
-                        <button type="submit" id="submit_canvas">Validez !</button>
-                        <button type="reset" id="clear_canvas">Recommencez</button>
-                    </div>
-                </div>
-            </section>
-            <!--BLOC MESSAGES DE CONFIRMATION / EXPIRATION -->
-            <p id="form_confirm">Vélo réservé à la station <span id="confirm_station">STATION</span> par <span
-                    id="confirm_name">NAME</span><br/>
-                Temps restant : <span id="timer"></span> avant l'expiration de la session</p>
-            <p id="form_exp">Réservation expirée</p>
-<!--            <footer>
-            </footer>-->
+            <!--            <footer>
+                        </footer>-->
         </div>
     </main>
 </div>

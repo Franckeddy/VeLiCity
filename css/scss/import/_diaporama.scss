@@ -1,0 +1,106 @@
+/******* Diaporama *******/
+#diaporama {
+  position: relative;
+  width: 40%;
+  margin: 2% auto;
+  display: contents;
+
+  button {
+    position: absolute;
+    top: 55%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: none;
+    color: $white;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+
+#caroussel {
+  position: relative;
+  width: 90%;
+  height: auto;
+  margin: 20px auto;
+  border: 10px;
+
+  figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: $white;
+    font-size: 3vh;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  figure {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    transition: all 2s;
+  }
+
+  figure + figure {
+    opacity: 0;
+  }
+
+  figure:nth-child(1) figcaption {
+    top: 20%; /* 1ére légende */
+  }
+
+  figure:nth-child(2) figcaption {
+    top: 30%; /* 2éme légende */
+  }
+
+  figure:nth-child(3) figcaption {
+    top: 40%; /* 3éme légende */
+  }
+
+  figure:nth-child(4) figcaption {
+    top: 20%; /* 4éme légende */
+  }
+
+  figure:nth-child(5) figcaption {
+    top: 20%; /* 5éme légende */
+  }
+
+  img {
+    width: 100%;
+    max-height: 32vh;
+    border-radius: 30px;
+  }
+}
+
+
+#bouttonDroit {
+  right: 1%;
+}
+
+#bouttonGauche {
+  left: 1%;
+}
+
+.chevron::before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  top: 0.15em;
+}
+
+.chevron.right:before {
+  left: -0.15em;
+  transform: rotate(45deg);
+}
+
+.chevron.left:before {
+  left: 0.25em;
+  transform: rotate(-135deg);
+}

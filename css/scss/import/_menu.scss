@@ -1,0 +1,144 @@
+/******* header / menu *******/
+#logo {
+  width: 100px;
+  position: fixed;
+  top: 20px;
+  right: 80px;
+  display: block;
+  z-index: 20;
+}
+
+i {
+  color: #fff;
+}
+
+.open {
+  position: fixed;
+  top: 10px;
+  right: 25px;
+  width: 35px;
+  height: 30px;
+  display: block;
+  cursor: pointer;
+  z-index: 10;
+  transition: opacity 0.2s linear;
+}
+
+.open span {
+  display: block;
+  float: left;
+  clear: both;
+  height: 4px;
+  width: 35px;
+  border-radius: 40px;
+  background-color: black;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.open span:nth-child(1) {
+  margin-top: 10px;
+  z-index: 9;
+}
+
+.open span:nth-child(2) {
+  margin-top: 25px;
+}
+
+.open span:nth-child(3) {
+  margin-top: 40px;
+}
+
+.sub-menu {
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  height: 0;
+  width: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
+  background-color: rgba(218, 218, 218, 0.6);
+  border-radius: 50%;
+  z-index: 18;
+  overflow: hidden;
+}
+
+.sub-menu li {
+  font-weight: bold;
+  display: block;
+  float: right;
+  clear: both;
+  height: auto;
+  margin-right: -160px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.sub-menu li:first-child {
+  margin-top: 180px;
+}
+
+.sub-menu li:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.sub-menu li:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.sub-menu li:nth-child(3) {
+  transition-delay: 0.15s;
+}
+
+.sub-menu li:nth-child(4) {
+  transition-delay: 0.2s;
+}
+
+.sub-menu li:nth-child(5) {
+  transition-delay: 0.25s;
+}
+
+.sub-menu li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+  width: 100%;
+  display: block;
+  float: left;
+  line-height: 40px;
+}
+
+.sub-menu li a:hover {
+  color: rgb(86, 152, 198);
+}
+
+.oppenned .sub-menu {
+  opacity: 1;
+  height: 400px;
+  width: 400px;
+}
+
+.oppenned span:nth-child(1) {
+  transform: rotate(45deg) translateY(12px) translateX(12px);
+}
+
+.oppenned span:nth-child(2) {
+  overflow: visible;
+  height: 400px;
+  width: 400px;
+  right: -160px;
+  top: -160px;
+  border-radius: 50%;
+  background-color: rgba(255, 199, 41, 0.6);
+}
+
+.oppenned span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-10px) translateX(10px);
+}
+
+.oppenned li {
+  margin-right: 168px;
+}
+
+
