@@ -19,15 +19,13 @@
   position: relative;
 }
 
-#before_form { /* encart avant l'apparition du formulaire */
-  text-align: center;
-}
-
 .presentation { /* classe du texte précédant le formulaire */
   padding: 50px;
 }
 
 #before_form {
+  text-align: center;
+  font-weight: bold;
   ul {
     padding-left: 0;
     margin-top: 3em;
@@ -86,7 +84,7 @@
 
 #station_infos {
   display: none;
-  margin-top: 35px;
+  margin-bottom: 35px;
   margin-left: 20px;
   margin-right: 20px;
 

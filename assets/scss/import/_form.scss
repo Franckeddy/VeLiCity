@@ -54,16 +54,27 @@
 }
 
 #reservation { /* input submit du formulaire */
+  display: block;
+  margin: auto auto 1em;
+  padding: 10px 15px;
+  @include border-radius (8px);
+  font-size: 14px;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  letter-spacing: .4px;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  background-color: $blue;
+  color: $white;
+  transition: all .3s ease-in-out;
   cursor: pointer;
-  background-color: $yellow;
-  padding: 7px 11px 7px 11px;
-  border: none;
-  border-radius: 3px;
-  font-size: 15px;
 
   &:hover {
-    background-color: $blue;
-    color: $white;
+    color: #00a0e1;
+    background: transparent;
+    box-shadow: 0 0 2px rgba(0,158,227,0.5);
+    outline: 0;
   }
 }
 

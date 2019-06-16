@@ -91,7 +91,7 @@ body {
   margin: 0;
   padding: 4em;
   width: 100%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
   background-color: #F5F5F5; }
 
 main {
@@ -130,7 +130,7 @@ p {
 header {
   display: flex;
   align-items: center;
-  background-image: linear-gradient(to bottom, #00194d, #fff);
+  background-image: linear-gradient(to bottom, #0079b5, #fff);
   padding-left: 1%;
   color: #fff; }
   header h1 {
@@ -145,7 +145,7 @@ header {
   transition: color 1s; }
 
 .blue {
-  color: #5698c6; }
+  color: rgba(0, 124, 180, 0.53); }
 
 #welcomeText {
   padding: 10px 5px;
@@ -237,7 +237,7 @@ i {
       float: left;
       line-height: 40px; }
       .sub-menu li a:hover {
-        color: #5698c6; }
+        color: rgba(0, 124, 180, 0.53); }
 
 .oppenned .sub-menu {
   opacity: 1;
@@ -288,20 +288,36 @@ i {
   animation-name: slideToBottom; }
 
 .js-modal {
-  color: #fff;
-  font-weight: bold;
+  display: block;
+  padding: 10px 15px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  letter-spacing: .4px;
+  line-height: 1.5;
   text-align: center;
-  padding: inherit;
-  align-items: center;
-  background-image: radial-gradient(circle at center, #00194d, #fff);
-  margin-top: 30px;
-  transition: all 1s ease-out; }
-
-.js-modal:hover {
-  font-weight: bold;
-  color: #00194d;
   text-decoration: none;
-  background-image: radial-gradient(circle at center, #8BC667, #fff); }
+  vertical-align: middle;
+  background-color: #0079b5;
+  color: #fff;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  margin: 3em auto auto;
+  width: 60%; }
+  .js-modal:hover {
+    color: #00a0e1;
+    background: transparent;
+    box-shadow: 0 0 2px rgba(0, 158, 227, 0.5);
+    outline: 0; }
+  .js-modal a {
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent; }
+    .js-modal a:hover {
+      color: #00a0e1; }
 
 /******* Diaporama *******/
 #diaporama {
@@ -401,7 +417,7 @@ i {
 
 #canvas_message {
   /* consigne expliquant le canvas */
-  background-image: linear-gradient(to bottom, #00194d, #fff);
+  background-image: linear-gradient(to bottom, #0079b5, #fff);
   flex-wrap: wrap;
   height: 20%;
   box-sizing: border-box;
@@ -449,7 +465,7 @@ i {
   /* remise à zéro du canvas */
   cursor: pointer;
   padding: 10px 15px 10px 15px;
-  border: 1px solid #00194d;
+  border: 1px solid #0079b5;
   border-radius: 3px;
   background-color: #fff;
   font-size: 15px; }
@@ -460,11 +476,11 @@ i {
   padding: 10px 15px 10px 15px;
   border: none;
   border-radius: 3px;
-  background-color: #00194d;
+  background-color: #0079b5;
   font-size: 15px;
   color: #fff; }
   #submit_canvas:hover {
-    background-color: rgba(0, 29, 100, 0.6); }
+    background-color: #004C61; }
 
 footer {
   background-color: rgba(218, 218, 218, 0.6);
@@ -526,21 +542,35 @@ footer {
 
 #reservation {
   /* input submit du formulaire */
-  cursor: pointer;
-  background-color: rgba(255, 199, 41, 0.6);
-  padding: 7px 11px 7px 11px;
-  border: none;
-  border-radius: 3px;
-  font-size: 15px; }
+  display: block;
+  margin: auto auto 1em;
+  padding: 10px 15px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  letter-spacing: .4px;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  background-color: #0079b5;
+  color: #fff;
+  transition: all .3s ease-in-out;
+  cursor: pointer; }
   #reservation:hover {
-    background-color: #00194d;
-    color: #fff; }
+    color: #00a0e1;
+    background: transparent;
+    box-shadow: 0 0 2px rgba(0, 158, 227, 0.5);
+    outline: 0; }
 
 #form_confirm {
   /* message de confirmation de réservation */
   color: #fff;
   display: none;
-  background: radial-gradient(closest-side, #F5F5F5, rgba(0, 29, 100, 0.6), #F5F5F5);
+  background: radial-gradient(closest-side, #F5F5F5, #004C61, #F5F5F5);
   padding: 20px;
   text-align: center;
   margin: 30px 30px 50px 30px; }
@@ -579,27 +609,26 @@ footer {
   box-sizing: border-box;
   position: relative; }
 
-#before_form {
-  /* encart avant l'apparition du formulaire */
-  text-align: center; }
-
 .presentation {
   /* classe du texte précédant le formulaire */
   padding: 50px; }
 
-#before_form ul {
-  padding-left: 0;
-  margin-top: 3em; }
-#before_form li {
-  /* liste des codes couleurs des marqueurs */
-  font-family: 'Nunito', sans-serif, Arial, Helvetica;
-  font-weight: normal;
-  font-size: 16px;
-  list-style: none;
-  text-align: left;
-  padding-left: 25px;
-  margin-bottom: 30px;
-  position: relative; }
+#before_form {
+  text-align: center;
+  font-weight: bold; }
+  #before_form ul {
+    padding-left: 0;
+    margin-top: 3em; }
+  #before_form li {
+    /* liste des codes couleurs des marqueurs */
+    font-family: 'Nunito', sans-serif, Arial, Helvetica;
+    font-weight: normal;
+    font-size: 16px;
+    list-style: none;
+    text-align: left;
+    padding-left: 25px;
+    margin-bottom: 30px;
+    position: relative; }
 
 #before_click {
   font-weight: bold;
@@ -638,7 +667,7 @@ footer {
 
 #station_infos {
   display: none;
-  margin-top: 35px;
+  margin-bottom: 35px;
   margin-left: 20px;
   margin-right: 20px; }
   #station_infos p {
