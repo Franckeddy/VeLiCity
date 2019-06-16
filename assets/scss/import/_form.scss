@@ -47,7 +47,7 @@
   display: none;
   margin-left: 20px;
   margin-top: 20px;
-  color: #ca273b;
+  color: $red;
   padding-left: 8px;
 }
 
@@ -65,7 +65,7 @@
 }
 
 #form_confirm { /* message de confirmation de réservation */
-  color: #fff;
+  color: $white;
   display: none;
   background: radial-gradient(closest-side, #F5F5F5, rgba(0, 25, 77, 0.5), #F5F5F5);
   padding: 20px;
@@ -78,11 +78,11 @@
 }
 
 #timer { /* compte à rebours */
-  color: #ca273b;
+  color: $red;
 }
 
 #form_exp { /* message d'expiration de réservation */
-  color: #ca273b;
+  color: $red;
   display: none;
   background-color: #eeeeee;
   padding: 20px;

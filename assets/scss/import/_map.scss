@@ -33,6 +33,7 @@
 #before_form {
   ul {
     padding-left: 0;
+    margin-top: 3em;
   }
 
   li { /* liste des codes couleurs des marqueurs */
@@ -50,7 +51,7 @@
 #before_click {
   font-weight: bold;
   font-size: 18px;
-  margin-top: 0;
+  margin-top: -25px;
 }
 
 #station_verte::before {
