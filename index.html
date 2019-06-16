@@ -148,7 +148,11 @@
                             <span class="fa fa-compass"></span>
                             <h1>Louer votre VéLiCity'</h1>
                         </header>
+                        <div class="row">
+                            <div class="col-8">
                         <div id="map"></div>
+                            </div>
+                            <div class="col-4">
                         <div id="form_container">
                             <div id="before_form" class="presentation">
                                 <h3 id="before_click">Cliquez sur la station de votre choix pour afficher les
@@ -179,7 +183,9 @@
                             </form>
                             <p id="nobikes">Réservation impossible (aucun vélo disponible)</p>
                         </div>
-                        <div id="canvas_container">
+                        </div>
+                        </div>
+                        <div id="canvas_container" style="display: none">
                             <div id="canvas_message">
                                 <i class="fas fa-signature"></i>
                                 <h1>Signez dans la case pour confirmer :</h1>
@@ -197,13 +203,11 @@
                         </div>
                     </section>
                 </div>
-                <!--BLOC MESSAGES DE CONFIRMATION / EXPIRATION -->
-                <p id="form_confirm">Vélo réservé à la station <span id="confirm_station">STATION</span> par <span
-                        id="confirm_name">NAME</span><br/>
-                    Temps restant : <span id="timer"></span> avant l'expiration de la session</p>
-                <p id="form_exp">Réservation expirée</p>
             </div>
-
+            <p id="form_confirm">Vélo réservé à la station <span id="confirm_station">STATION</span> par <span
+                    id="confirm_name">NAME</span><br/>
+                Temps restant : <span id="timer"></span> avant l'expiration de la session</p>
+            <p id="form_exp">Réservation expirée</p>
             <!--            <footer>
                         </footer>-->
         </div>

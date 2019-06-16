@@ -1,17 +1,112 @@
 @charset "UTF-8";
+@media all and (min-width: 1367px) {
+  /* responsive écrans HD */
+  #form_confirm {
+    margin: 30px 0 50px 0; }
+
+  #form_exp {
+    margin: 30px 0 50px 0; } }
+@media all and (max-width: 576px) {
+  /* responsive smartphones (320px-576px) */
+  #form_bikes legend {
+    padding: 0 10px 10px 10px; }
+
+  #form_container form input {
+    margin-top: 0; }
+
+  #form_container form label {
+    margin-left: 5px; }
+
+  #name {
+    margin: 0 0 15px 5px;
+    width: 80%; }
+
+  #firstname {
+    margin: 0 0 20px 5px;
+    width: 80%; }
+
+  #reservation {
+    margin: 0 0 10px 5px; } }
+@media all and (min-width: 1367px) {
+  /* responsive écrans HD */
+  #map_container {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 50px; }
+
+  #form_container {
+    width: 100%; } }
+@media all and (max-width: 992px) {
+  /* responsive écrans tablette (768px-992px) */
+  #map {
+    width: 60%; }
+
+  #map_container {
+    flex-wrap: wrap;
+    justify-content: center; }
+
+  #form_container {
+    width: 40%;
+    height: auto;
+    max-width: 60%; }
+
+  .presentation {
+    padding: 40px 30px 30px 30px; }
+
+  #before_form li {
+    text-align: center; } }
+@media all and (max-width: 768px) {
+  /* responsive grands smartphones (576px-768px) */
+  #map {
+    width: 100%; }
+
+  #form_container {
+    width: 100%;
+    max-width: 100%; } }
+@media all and (max-width: 576px) {
+  /* responsive smartphones (320px-576px) */
+  #map {
+    height: 300px; } }
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+@keyframes slideFromTop {
+  from {
+    transform: translateY(-50px); }
+  to {
+    transform: translateY(0px); } }
+@keyframes slideToBottom {
+  from {
+    transform: translateY(0px); }
+  to {
+    transform: translateY(50px); } }
 body {
   margin: 0;
   padding: 4em;
   width: 100%;
   font-family: 'Open Sans', sans-serif;
-  background-color: whitesmoke; }
+  background-color: #F5F5F5; }
 
 main {
   margin: 1em; }
 
+p {
+  margin-top: revert; }
+
 .card {
   margin-bottom: 1em;
-  height: 350px; }
+  height: 350px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px; }
 
 .card-1 {
   margin-bottom: 1em;
@@ -24,11 +119,12 @@ main {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: .25rem; }
-
-p {
-  margin-top: revert; }
+  border: 1px solid rgba(218, 218, 218, 0.6);
+  border-radius: .25rem;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px; }
 
 /******* header *******/
 header {
@@ -80,30 +176,26 @@ i {
   cursor: pointer;
   z-index: 10;
   transition: opacity 0.2s linear; }
-
-.open span {
-  display: block;
-  float: left;
-  clear: both;
-  height: 4px;
-  width: 35px;
-  border-radius: 40px;
-  background-color: #000;
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  overflow: hidden;
-  transition: all 0.4s ease; }
-
-.open span:nth-child(1) {
-  margin-top: 10px;
-  z-index: 9; }
-
-.open span:nth-child(2) {
-  margin-top: 25px; }
-
-.open span:nth-child(3) {
-  margin-top: 40px; }
+  .open span {
+    display: block;
+    float: left;
+    clear: both;
+    height: 4px;
+    width: 35px;
+    border-radius: 40px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    overflow: hidden;
+    transition: all 0.4s ease; }
+    .open span:nth-child(1) {
+      margin-top: 10px;
+      z-index: 9; }
+    .open span:nth-child(2) {
+      margin-top: 25px; }
+    .open span:nth-child(3) {
+      margin-top: 40px; }
 
 .sub-menu {
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -116,54 +208,45 @@ i {
   border-radius: 50%;
   z-index: 18;
   overflow: hidden; }
-
-.sub-menu li {
-  font-weight: bold;
-  display: block;
-  float: right;
-  clear: both;
-  height: auto;
-  margin-right: -160px;
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
-
-.sub-menu li:first-child {
-  margin-top: 180px; }
-
-.sub-menu li:nth-child(1) {
-  transition-delay: 0.05s; }
-
-.sub-menu li:nth-child(2) {
-  transition-delay: 0.1s; }
-
-.sub-menu li:nth-child(3) {
-  transition-delay: 0.15s; }
-
-.sub-menu li:nth-child(4) {
-  transition-delay: 0.2s; }
-
-.sub-menu li:nth-child(5) {
-  transition-delay: 0.25s; }
-
-.sub-menu li a {
-  text-decoration: none;
-  color: #000;
-  font-size: 1.2em;
-  width: 100%;
-  display: block;
-  float: left;
-  line-height: 40px; }
-
-.sub-menu li a:hover {
-  color: #5698c6; }
+  .sub-menu li {
+    font-weight: bold;
+    display: block;
+    float: right;
+    clear: both;
+    height: auto;
+    margin-right: -160px;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+    .sub-menu li:first-child {
+      margin-top: 180px; }
+    .sub-menu li:nth-child(1) {
+      transition-delay: 0.05s; }
+    .sub-menu li:nth-child(2) {
+      transition-delay: 0.1s; }
+    .sub-menu li:nth-child(3) {
+      transition-delay: 0.15s; }
+    .sub-menu li:nth-child(4) {
+      transition-delay: 0.2s; }
+    .sub-menu li:nth-child(5) {
+      transition-delay: 0.25s; }
+    .sub-menu li a {
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.8);
+      font-size: 1.2em;
+      width: 100%;
+      display: block;
+      float: left;
+      line-height: 40px; }
+      .sub-menu li a:hover {
+        color: #5698c6; }
 
 .oppenned .sub-menu {
   opacity: 1;
   height: 400px;
   width: 400px; }
-
+.oppenned li {
+  margin-right: 168px; }
 .oppenned span:nth-child(1) {
   transform: rotate(45deg) translateY(12px) translateX(12px); }
-
 .oppenned span:nth-child(2) {
   overflow: visible;
   height: 400px;
@@ -172,12 +255,8 @@ i {
   top: -160px;
   border-radius: 50%;
   background-color: rgba(255, 199, 41, 0.6); }
-
 .oppenned span:nth-child(3) {
   transform: rotate(-45deg) translateY(-10px) translateX(10px); }
-
-.oppenned li {
-  margin-right: 168px; }
 
 /* SECTION Modal */
 .modal {
@@ -208,33 +287,13 @@ i {
 .modal[aria-hidden="true"] .modal-wrapper {
   animation-name: slideToBottom; }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-@keyframes fadeOut {
-  from {
-    opacity: 1; }
-  to {
-    opacity: 0; } }
-@keyframes slideFromTop {
-  from {
-    transform: translateY(-50px); }
-  to {
-    transform: translateY(0px); } }
-@keyframes slideToBottom {
-  from {
-    transform: translateY(0px); }
-  to {
-    transform: translateY(50px); } }
 .js-modal {
   color: #fff;
   font-weight: bold;
   text-align: center;
   padding: inherit;
   align-items: center;
-  background-image: radial-gradient(circle at center, #1A2648, #fff);
+  background-image: radial-gradient(circle at center, #00194d, #fff);
   margin-top: 30px;
   transition: all 1s ease-out; }
 
@@ -272,7 +331,7 @@ i {
     position: absolute;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     font-size: 3vh;
     font-weight: 600;
@@ -331,10 +390,8 @@ i {
 /* SECTION CANVAS */
 #canvas_container {
   /* container de présentation + canvas + submit */
-  float: right;
   width: 50%;
-  height: 450px;
-  margin-top: -450px;
+  height: auto;
   padding: 10px;
   background-color: #eeeeee;
   box-sizing: border-box;
@@ -372,7 +429,7 @@ i {
   box-sizing: border-box;
   display: block;
   position: relative;
-  background-color: white;
+  background-color: #fff;
   width: 100%;
   height: 100%; }
 
@@ -406,9 +463,8 @@ i {
   background-color: #00194d;
   font-size: 15px;
   color: #fff; }
-
-#submit_canvas:hover {
-  background-color: rgba(0, 29, 100, 0.6); }
+  #submit_canvas:hover {
+    background-color: rgba(0, 29, 100, 0.6); }
 
 footer {
   background-color: rgba(218, 218, 218, 0.6);
@@ -417,19 +473,16 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   padding: 5px 20px 0 20px; }
-
-footer p:first-child {
-  margin-right: 20px; }
-
-footer a {
-  text-decoration: none;
-  color: #fff; }
+  footer a {
+    text-decoration: none;
+    color: #fff; }
+  footer p:first-child {
+    margin-right: 20px; }
 
 /* SECTION FORMULAIRE */
 #form_container form {
   /* le formulaire de réservation */
   display: none; }
-
 #form_container form input {
   margin-top: 20px;
   font-family: 'Nunito', sans-serif, Arial, Helvetica; }
@@ -437,7 +490,7 @@ footer a {
 #name {
   /* input name du formulaire */
   font-size: 14px;
-  border: 2px solid silver;
+  border: 2px solid rgba(218, 218, 218, 0.6);
   border-radius: 3px;
   margin-left: 5px;
   padding: 5px 5px 5px 8px;
@@ -446,7 +499,7 @@ footer a {
 #firstname {
   /* input firstname du formulaire */
   font-size: 14px;
-  border: 2px solid silver;
+  border: 2px solid rgba(218, 218, 218, 0.6);
   border-radius: 3px;
   margin-left: 5px;
   padding: 5px 5px 5px 8px;
@@ -454,16 +507,14 @@ footer a {
 
 #form_bikes {
   font-family: 'Nunito', sans-serif, Arial, Helvetica; }
-
-#form_bikes fieldset {
-  border: 4px solid silver; }
-
-#form_bikes legend {
-  font-weight: bold;
-  font-size: 1.2em;
-  padding: 0 10px 0 10px;
-  margin: auto;
-  width: auto; }
+  #form_bikes fieldset {
+    border: 4px solid rgba(218, 218, 218, 0.6); }
+  #form_bikes legend {
+    font-weight: bold;
+    font-size: 1em;
+    padding: 0 10px 0 10px;
+    margin: auto;
+    width: auto; }
 
 #nobikes {
   /* message en cas d'indisponibilité de vélos */
@@ -476,20 +527,20 @@ footer a {
 #reservation {
   /* input submit du formulaire */
   cursor: pointer;
-  background-color: #ffc457;
+  background-color: rgba(255, 199, 41, 0.6);
   padding: 7px 11px 7px 11px;
   border: none;
   border-radius: 3px;
   font-size: 15px; }
-
-#reservation:hover {
-  background-color: #ffbc3e; }
+  #reservation:hover {
+    background-color: #00194d;
+    color: #fff; }
 
 #form_confirm {
   /* message de confirmation de réservation */
   color: #fff;
   display: none;
-  background: radial-gradient(closest-side, #F5F5F5, rgba(0, 25, 77, 0.5), #F5F5F5);
+  background: radial-gradient(closest-side, #F5F5F5, rgba(0, 29, 100, 0.6), #F5F5F5);
   padding: 20px;
   text-align: center;
   margin: 30px 30px 50px 30px; }
@@ -510,34 +561,6 @@ footer a {
   text-align: center;
   margin: 30px 30px 50px 30px; }
 
-@media all and (min-width: 1367px) {
-  /* responsive écrans HD */
-  #form_confirm {
-    margin: 30px 0 50px 0; }
-
-  #form_exp {
-    margin: 30px 0 50px 0; } }
-@media all and (max-width: 576px) {
-  /* responsive smartphones (320px-576px) */
-  #form_bikes legend {
-    padding: 0 10px 10px 10px; }
-
-  #form_container form input {
-    margin-top: 0; }
-
-  #form_container form label {
-    margin-left: 5px; }
-
-  #name {
-    margin: 0 0 15px 5px;
-    width: 80%; }
-
-  #firstname {
-    margin: 0 0 20px 5px;
-    width: 80%; }
-
-  #reservation {
-    margin: 0 0 10px 5px; } }
 /* SECTION MAP */
 #map_container {
   /* container de la map + formulaire + canvas */
@@ -551,9 +574,6 @@ footer a {
 
 #form_container {
   padding: 10px;
-  margin-top: 5px;
-  width: 50%;
-  max-width: 50%;
   height: 450px;
   background-color: #eeeeee;
   box-sizing: border-box;
@@ -623,46 +643,5 @@ footer a {
   margin-right: 20px; }
   #station_infos p {
     padding-left: 8px; }
-
-@media all and (min-width: 1367px) {
-  /* responsive écrans HD */
-  #map_container {
-    margin-right: 0;
-    margin-left: 0;
-    margin-bottom: 50px; }
-
-  #form_container {
-    max-width: 40%; } }
-@media all and (max-width: 992px) {
-  /* responsive écrans tablette (768px-992px) */
-  #map {
-    width: 60%; }
-
-  #map_container {
-    flex-wrap: wrap;
-    justify-content: center; }
-
-  #form_container {
-    width: 40%;
-    height: auto;
-    max-width: 60%; }
-
-  .presentation {
-    padding: 40px 30px 30px 30px; }
-
-  #before_form li {
-    text-align: center; } }
-@media all and (max-width: 768px) {
-  /* responsive grands smartphones (576px-768px) */
-  #map {
-    width: 100%; }
-
-  #form_container {
-    width: 100%;
-    max-width: 100%; } }
-@media all and (max-width: 576px) {
-  /* responsive smartphones (320px-576px) */
-  #map {
-    height: 300px; } }
 
 /*# sourceMappingURL=app.css.map */

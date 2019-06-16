@@ -1,17 +1,19 @@
 /* SECTION FORMULAIRE */
 
-#form_container form { /* le formulaire de réservation */
-  display: none;
-}
+#form_container {
+  form { /* le formulaire de réservation */
+    display: none;
+  }
 
-#form_container form input {
-  margin-top: 20px;
-  font-family: 'Nunito', sans-serif, Arial, Helvetica;
+  form input {
+    margin-top: 20px;
+    font-family: 'Nunito', sans-serif, Arial, Helvetica;
+  }
 }
 
 #name { /* input name du formulaire */
   font-size: 14px;
-  border: 2px solid rgb(192, 192, 192);
+  border: 2px solid $grey;
   border-radius: 3px;
   margin-left: 5px;
   padding: 5px 5px 5px 8px;
@@ -20,7 +22,7 @@
 
 #firstname { /* input firstname du formulaire */
   font-size: 14px;
-  border: 2px solid rgb(192, 192, 192);
+  border: 2px solid $grey;
   border-radius: 3px;
   margin-left: 5px;
   padding: 5px 5px 5px 8px;
@@ -29,18 +31,18 @@
 
 #form_bikes {
   font-family: 'Nunito', sans-serif, Arial, Helvetica;
-}
 
-#form_bikes fieldset {
-  border: 4px solid rgb(192, 192, 192);
-}
+  fieldset {
+    border: 4px solid $grey;
+  }
 
-#form_bikes legend {
-  font-weight: bold;
-  font-size: 1.2em;
-  padding: 0 10px 0 10px;
-  margin: auto;
-  width: auto;
+  legend {
+    font-weight: bold;
+    font-size: 1em;
+    padding: 0 10px 0 10px;
+    margin: auto;
+    width: auto;
+  }
 }
 
 #nobikes { /* message en cas d'indisponibilité de vélos */
@@ -53,21 +55,22 @@
 
 #reservation { /* input submit du formulaire */
   cursor: pointer;
-  background-color: rgb(255, 196, 87);
+  background-color: $yellow;
   padding: 7px 11px 7px 11px;
   border: none;
   border-radius: 3px;
   font-size: 15px;
-}
 
-#reservation:hover {
-  background-color: rgb(255, 188, 62);
+  &:hover {
+    background-color: $blue;
+    color: $white;
+  }
 }
 
 #form_confirm { /* message de confirmation de réservation */
   color: $white;
   display: none;
-  background: radial-gradient(closest-side, #F5F5F5, rgba(0, 25, 77, 0.5), #F5F5F5);
+  background: radial-gradient(closest-side, $whitesmoke, $blue-2, $whitesmoke);
   padding: 20px;
   text-align: center;
   margin: 30px 30px 50px 30px;
@@ -84,48 +87,8 @@
 #form_exp { /* message d'expiration de réservation */
   color: $red;
   display: none;
-  background-color: #eeeeee;
+  background-color: $withe-2;
   padding: 20px;
   text-align: center;
   margin: 30px 30px 50px 30px;
-}
-
-@media all and (min-width: 1367px) {
-  /* responsive écrans HD */
-  #form_confirm {
-    margin: 30px 0 50px 0;
-  }
-
-  #form_exp {
-    margin: 30px 0 50px 0;
-  }
-}
-
-@media all and (max-width: 576px) {
-  /* responsive smartphones (320px-576px) */
-  #form_bikes legend {
-    padding: 0 10px 10px 10px;
-  }
-
-  #form_container form input {
-    margin-top: 0;
-  }
-
-  #form_container form label {
-    margin-left: 5px;
-  }
-
-  #name {
-    margin: 0 0 15px 5px;
-    width: 80%;
-  }
-
-  #firstname {
-    margin: 0 0 20px 5px;
-    width: 80%;
-  }
-
-  #reservation {
-    margin: 0 0 10px 5px;
-  }
 }

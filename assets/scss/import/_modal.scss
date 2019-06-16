@@ -9,7 +9,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: $black;
   animation: fadeIn .3s both;
 }
 
@@ -32,49 +32,13 @@
   animation-name: slideToBottom;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes slideFromTop {
-  from {
-    transform: translateY(-50px);
-  }
-  to {
-    transform: translateY(0px);
-  }
-}
-
-@keyframes slideToBottom {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(50px);
-  }
-}
-
 .js-modal {
   color: $white;
   font-weight: bold;
   text-align: center;
   padding: inherit;
   align-items: center;
-  background-image: radial-gradient(circle at center, #1A2648, $white);
+  background-image: radial-gradient(circle at center, $blue, $white);
   margin-top: 30px;
   transition: all 1s ease-out;
 }

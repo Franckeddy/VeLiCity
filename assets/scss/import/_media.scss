@@ -1,0 +1,99 @@
+//form
+@media all and (min-width: 1367px) {
+  /* responsive écrans HD */
+  #form_confirm {
+    margin: 30px 0 50px 0;
+  }
+
+  #form_exp {
+    margin: 30px 0 50px 0;
+  }
+}
+
+@media all and (max-width: 576px) {
+  /* responsive smartphones (320px-576px) */
+  #form_bikes legend {
+    padding: 0 10px 10px 10px;
+  }
+
+  #form_container form input {
+    margin-top: 0;
+  }
+
+  #form_container form label {
+    margin-left: 5px;
+  }
+
+  #name {
+    margin: 0 0 15px 5px;
+    width: 80%;
+  }
+
+  #firstname {
+    margin: 0 0 20px 5px;
+    width: 80%;
+  }
+
+  #reservation {
+    margin: 0 0 10px 5px;
+  }
+}
+
+// map
+@media all and (min-width: 1367px) {
+  /* responsive écrans HD */
+  #map_container {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 50px;
+  }
+
+  #form_container {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 992px) {
+  /* responsive écrans tablette (768px-992px) */
+  #map {
+    width: 60%;
+  }
+
+  #map_container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #form_container {
+    width: 40%;
+    height: auto;
+    max-width: 60%;
+  }
+
+  .presentation {
+    padding: 40px 30px 30px 30px;
+  }
+
+  #before_form li {
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 768px) {
+  /* responsive grands smartphones (576px-768px) */
+  #map {
+    width: 100%;
+  }
+
+  #form_container {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media all and (max-width: 576px) {
+  /* responsive smartphones (320px-576px) */
+  #map {
+    height: 300px;
+  }
+}

@@ -9,7 +9,7 @@
     position: absolute;
     top: 55%;
     z-index: 2;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: $black;
     border: none;
     color: $white;
     height: 40px;
@@ -30,7 +30,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: $black;
     color: $white;
     font-size: 3vh;
     font-weight: 600;
@@ -74,7 +74,6 @@
     border-radius: 30px;
   }
 }
-
 
 #bouttonDroit {
   right: 1%;

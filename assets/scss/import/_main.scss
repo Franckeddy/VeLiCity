@@ -3,31 +3,11 @@ body {
   padding: 4em;
   width: 100%;
   font-family: 'Open Sans', sans-serif;
-  background-color: whitesmoke;
+  background-color: $whitesmoke;
 }
 
 main {
   margin: 1em;
-}
-
-.card {
-  margin-bottom: 1em;
-  height: 350px;
-}
-
-.card-1 {
-  margin-bottom: 1em;
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, .125);
-  border-radius: .25rem;
 }
 
 p {
