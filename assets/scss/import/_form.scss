@@ -1,4 +1,4 @@
-/* SECTION FORMULAIRE */
+/******* Formulaire *******/
 
 #form_container {
   form { /* le formulaire de réservation */
@@ -6,7 +6,7 @@
   }
 
   form input {
-    margin-top: 20px;
+    margin-top: 10px;
     font-family: 'Nunito', sans-serif, Arial, Helvetica;
   }
 }
@@ -81,10 +81,8 @@
 #form_confirm { /* message de confirmation de réservation */
   color: $white;
   display: none;
-  background: radial-gradient(closest-side, $whitesmoke, $blue-2, $whitesmoke);
-  padding: 20px;
+  background: radial-gradient($blue, $whitesmoke);
   text-align: center;
-  margin: 30px 30px 50px 30px;
 }
 
 #confirm_name {

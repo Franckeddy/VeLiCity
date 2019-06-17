@@ -1,4 +1,4 @@
-/* SECTION MAP */
+/******* Map *******/
 
 #map_container { /* container de la map + formulaire + canvas */
   flex-wrap: wrap;
@@ -24,6 +24,7 @@
 }
 
 #before_form {
+  font-size: 0.9em;
   text-align: center;
   font-weight: bold;
   ul {
@@ -83,8 +84,8 @@
 }
 
 #station_infos {
+  font-size: 0.8em;
   display: none;
-  margin-bottom: 35px;
   margin-left: 20px;
   margin-right: 20px;
 

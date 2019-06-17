@@ -165,11 +165,13 @@
                                             <li id="station_rouge">Station rouge : aucun vélo disponible</li>
                                         </ul>
                                     </div>
+                                    <hr/>
                                     <div id="station_infos">
                                         <p>Adresse : </p>
                                         <p>Nombre de places : </p>
                                         <p>Nombre de vélos disponibles : </p>
                                     </div>
+                                    <hr/>
                                     <form id="form_bikes">
                                         <fieldset>
                                             <legend>Réservez un vélo de cette station</legend>
@@ -189,6 +191,8 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-8">
                         <div id="canvas_container" style="display: none">
                             <div id="canvas_message">
                                 <i class="fas fa-signature"></i>
@@ -205,13 +209,19 @@
                                 <button type="reset" id="clear_canvas">Recommencez</button>
                             </div>
                         </div>
+                            </div>
+                            <div class="col-4">
+                        <p id="form_confirm">Réservation à la station : <br /><span id="confirm_station">STATION</span><br /> par <br /><span
+                                id="confirm_name">NAME</span><br/>
+                            Temps restant : <span id="timer"></span></p>
+                        <p id="form_exp">Réservation expirée</p>
+                        </div>
+                        </div>
                     </section>
                 </div>
+
             </div>
-            <p id="form_confirm">Vélo réservé à la station <span id="confirm_station">STATION</span> par <span
-                    id="confirm_name">NAME</span><br/>
-                Temps restant : <span id="timer"></span> avant l'expiration de la session</p>
-            <p id="form_exp">Réservation expirée</p>
+
             <!--            <footer>
                         </footer>-->
         </div>

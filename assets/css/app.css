@@ -1,9 +1,6 @@
 @charset "UTF-8";
 @media all and (min-width: 1367px) {
   /* responsive écrans HD */
-  #form_confirm {
-    margin: 30px 0 50px 0; }
-
   #form_exp {
     margin: 30px 0 50px 0; } }
 @media all and (max-width: 576px) {
@@ -126,7 +123,7 @@ p {
   -o-border-radius: 20px;
   border-radius: 20px; }
 
-/******* header *******/
+/******* Header *******/
 header {
   display: flex;
   align-items: center;
@@ -258,7 +255,7 @@ i {
 .oppenned span:nth-child(3) {
   transform: rotate(-45deg) translateY(-10px) translateX(10px); }
 
-/* SECTION Modal */
+/******* Modal *******/
 .modal {
   position: fixed;
   display: flex;
@@ -403,10 +400,10 @@ i {
   left: 0.25em;
   transform: rotate(-135deg); }
 
-/* SECTION CANVAS */
+/******* Canvas *******/
 #canvas_container {
   /* container de présentation + canvas + submit */
-  width: 50%;
+  width: 100%;
   height: auto;
   padding: 10px;
   background-color: #eeeeee;
@@ -495,12 +492,12 @@ footer {
   footer p:first-child {
     margin-right: 20px; }
 
-/* SECTION FORMULAIRE */
+/******* Formulaire *******/
 #form_container form {
   /* le formulaire de réservation */
   display: none; }
 #form_container form input {
-  margin-top: 20px;
+  margin-top: 10px;
   font-family: 'Nunito', sans-serif, Arial, Helvetica; }
 
 #name {
@@ -570,10 +567,8 @@ footer {
   /* message de confirmation de réservation */
   color: #fff;
   display: none;
-  background: radial-gradient(closest-side, #F5F5F5, #004C61, #F5F5F5);
-  padding: 20px;
-  text-align: center;
-  margin: 30px 30px 50px 30px; }
+  background: radial-gradient(#0079b5, #F5F5F5);
+  text-align: center; }
 
 #confirm_name {
   text-transform: uppercase; }
@@ -591,7 +586,7 @@ footer {
   text-align: center;
   margin: 30px 30px 50px 30px; }
 
-/* SECTION MAP */
+/******* Map *******/
 #map_container {
   /* container de la map + formulaire + canvas */
   flex-wrap: wrap;
@@ -614,6 +609,7 @@ footer {
   padding: 50px; }
 
 #before_form {
+  font-size: 0.9em;
   text-align: center;
   font-weight: bold; }
   #before_form ul {
@@ -666,8 +662,8 @@ footer {
   margin-left: -55px; }
 
 #station_infos {
+  font-size: 0.8em;
   display: none;
-  margin-bottom: 35px;
   margin-left: 20px;
   margin-right: 20px; }
   #station_infos p {
