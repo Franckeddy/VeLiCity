@@ -7,11 +7,11 @@ class MapClass {
         this.zoom = 14;
         this.ajaxURL = ajaxURL;
         this.map = L.map(mapid).setView([this.latView, this.lngView], this.zoom); // initialisation de la map
-        this.tilelayer = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=sk.eyJ1IjoiZnJhbmNrZWRkeSIsImEiOiJjandkbWNkbWQwbjlyM3pxMWdkejhkNnBpIn0.E8zcyasXSpWeHWT6c1z4fA', {
+        this.tilelayer = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=sk.eyJ1IjoiZnJhbmNrZWRkeSIsImEiOiJjandkbWNkbWQwbjlyM3pxMWdkejhkNnBpIn0.E8zcyasXSpWeHWT6c1z4fA", {
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
             maxZoom: 20,
-            id: 'mapbox.streets',
-            accessToken: 'sk.eyJ1IjoiZnJhbmNrZWRkeSIsImEiOiJjandkbWNkbWQwbjlyM3pxMWdkejhkNnBpIn0.E8zcyasXSpWeHWT6c1z4fA'
+            id: "mapbox.streets",
+            accessToken: "sk.eyJ1IjoiZnJhbmNrZWRkeSIsImEiOiJjandkbWNkbWQwbjlyM3pxMWdkejhkNnBpIn0.E8zcyasXSpWeHWT6c1z4fA"
         });
         this.tilelayer.addTo(this.map); // ajout du design à la map
         this.StreetMap = L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
@@ -36,35 +36,35 @@ class MapClass {
 
         };
         this.greenIcon = L.icon({
-            iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+            iconUrl: "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png",
             iconSize: [25, 41],
             iconAnchor: [12, 41],
             popupAnchor: [1, -34],
-            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
             shadowSize: [41, 41],
         });
 
         this.orangeIcon = L.icon({
-            iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
+            iconUrl: "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png",
             iconSize: [25, 41],
             iconAnchor: [12, 41],
             popupAnchor: [1, -34],
-            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
             shadowSize: [41, 41],
         });
 
         this.redIcon = L.icon({
-            iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+            iconUrl: "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png",
             iconSize: [25, 41],
             iconAnchor: [12, 41],
             popupAnchor: [1, -34],
-            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
             shadowSize: [41, 41],
         });
         this.document = $(document);
         this.regex = /......./; // enlève les chiffres et le tiret du nom de la station
-        this.name = this.container.find('#name');
-        this.firstname = this.container.find('#firstname');
+        this.name = this.container.find("#name");
+        this.firstname = this.container.find("#firstname");
         this.initSettings();
     }; // fin du constructor
 
@@ -77,9 +77,9 @@ class MapClass {
     launchAjax() {
             $.ajax({
                 url: this.ajaxURL,
-                type: 'GET',
-                dataType: 'json',
-                data: {param1: 'value1'},
+                type: "GET",
+                dataType: "json",
+                data: {param1: "value1"},
             })
             .done(function() {
                 console.log("success");
@@ -104,7 +104,7 @@ class MapClass {
             if (newStation.status === "CLOSED") { // si la station est FERMÉE
                 newStation.available_bikes === 0; // elle n'a plus de vélos disponibles
             };
-            
+
             if (newStation.available_bikes < 10) { // moins de 10 places restantes, il devient orange
                 myIcon = this.orangeIcon;
                 if (newStation.available_bikes === 0) { // à 0, il devient rouge
@@ -113,39 +113,39 @@ class MapClass {
             }
 
             let newMarker = L.marker([newStation.position.lat, newStation.position.lng], {icon: myIcon}, {opacity: 1}, {bubblingMouseEvents: true}, {interactive: true});
-            newMarker.bindPopup(newStation.name.replace(this.regex, 'STATION'));
-            newMarker.addTo(this.map).on('click', (e) => {
+            newMarker.bindPopup(newStation.name.replace(this.regex, "STATION"));
+            newMarker.addTo(this.map).on("click", (e) => {
                 this.newMarkerClic(newStation);
             });
         };
     };
 
     newMarkerClic(newStation) {
-        $('#before_form').remove();
-        $('#form_container').prepend('<p id="before_form"></p>'); 
-        $('#before_form').append(newStation.name.replace(this.regex, 'STATION')); // affiche le nom de la station
-        $('#form_container').css('width', '100%');
-        $('#station_infos').css('display', 'block'); // affiche les infos de la stations
-        $('#station_infos p').html(''); // efface les dernières valeurs d'informations
-        $('#form_container form').css('display', 'none'); // efface le formulaire
-        $('#nobikes').css('display', 'none'); // efface le message en cas de réservation impossible
-        
-        $('#station_infos p:first').append(`Adresse : ${newStation.address.toLowerCase()}`); // remplissage de l'info 1
-        $('#station_infos p:eq(1)').append(`Nombre de places : ${newStation.bike_stands}`); // remplissage de l'info 2
-        $('#station_infos p:last').append(`Nombre de vélos disponibles : ${newStation.available_bikes}`); // remplissage de l'info 3
+        $("#before_form").remove();
+        $("#form_container").prepend('<p id="before_form"></p>');
+        $("#before_form").append(newStation.name.replace(this.regex, "STATION")); // affiche le nom de la station
+        $("#form_container").css("width", "100%");
+        $("#station_infos").css("display", "block"); // affiche les infos de la stations
+        $("#station_infos p").html(''); // efface les dernières valeurs d'informations
+        $("#form_container form").css("display", 'none'); // efface le formulaire
+        $("#nobikes").css("display", "none"); // efface le message en cas de réservation impossible
 
-        $('#canvas_container').css('display', 'none'); // efface le canvas s'il est ouvert
-        $('#form_confirm').css('display', 'none'); // efface le message de confirmation
-        $('#form_exp').css('display', 'none'); // efface le message d'expiration de reservation
+        $("#station_infos p:first").append(`Adresse : ${newStation.address.toLowerCase()}`); // remplissage de l'info 1
+        $("#station_infos p:eq(1)").append(`Nombre de places : ${newStation.bike_stands}`); // remplissage de l'info 2
+        $("#station_infos p:last").append(`Nombre de vélos disponibles : ${newStation.available_bikes}`); // remplissage de l'info 3
+
+        $("#canvas_container").css("display", "none"); // efface le canvas s'il est ouvert
+        $("#form_confirm").css("display", "none"); // efface le message de confirmation
+        $("#form_exp").css("display", "none"); // efface le message d'expiration de reservation
 
         if (newStation.available_bikes > 0) { // S'il y a des vélos disponibles...
-            $('#form_container form').css('display', 'block');
-			$('html, body').animate({ // pour les mobiles, scroll down jusqu'au formulaire
+            $("#form_container form").css("display", "block");
+			$("html, body").animate({ // pour les mobiles, scroll down jusqu'au formulaire
 			    scrollTop: $("#before_form").offset().top
 			}, 1000);
         } else {
-            $('#nobikes').css('display', 'block'); // message de réservation impossible
-            $('html, body').animate({ // pour les mobiles, scroll down jusqu'au formulaire
+            $("#nobikes").css("display", "block"); // message de réservation impossible
+            $("html, body").animate({ // pour les mobiles, scroll down jusqu'au formulaire
                 scrollTop: $("#before_form").offset().top
             }, 1000);
         }

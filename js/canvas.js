@@ -16,10 +16,10 @@ class CanvasClass {
         this.click = function (e) { // crée une fonction stable qui permet au OFF de marcher
             console.log("bougé");
             e.preventDefault(); // permet de ne pas déclencher d'événement de souris si c'est en mode digital
-            this.ctx.strokeStyle = 'grey';
+            this.ctx.strokeStyle = "grey";
             this.ctx.lineWidth = 4;
-            this.ctx.lineJoin = 'round';
-            this.ctx.lineCap = 'round';
+            this.ctx.lineJoin = "round";
+            this.ctx.lineCap = "round";
             this.ctx.beginPath();
             this.ctx.moveTo(this.x, this.y);
             this.ctx.lineTo(this.x2, this.y2);
@@ -34,21 +34,21 @@ class CanvasClass {
     }; // fin du constructor
 
     initSettings() {
-        this.canvas.on('mousedown', (e) => { // clic
+        this.canvas.on("mousedown", (e) => { // clic
             console.log("MOUSEDOWN")
-            this.canvas.on('mousemove', this.draw);
+            this.canvas.on("mousemove", this.draw);
         });
 
-        this.canvas.on('mouseup', (e) => { // clic relevé
+        this.canvas.on("mouseup", (e) => { // clic relevé
+            this.canvas.off("mousemove", this.draw);
+        });
+
+        this.canvas.on("mouseleave", (e) => { // la souris quitte le périmètre du Canvas
             this.canvas.off('mousemove', this.draw);
         });
 
-        this.canvas.on('mouseleave', (e) => { // la souris quitte le périmètre du Canvas
-            this.canvas.off('mousemove', this.draw);
-        });
-
-        this.canvas.on('mousemove', (e) => { // la souris bouge sur le Canvas
-            console.log("MOUSEMOVE")
+        this.canvas.on("mousemove", (e) => { // la souris bouge sur le Canvas
+            console.log("MOUSEMOVE");
             this.topCanvas = this.canvas[0].getBoundingClientRect().top;
             this.leftCanvas = this.canvas[0].getBoundingClientRect().left;
             this.x2 = this.x;
@@ -57,26 +57,26 @@ class CanvasClass {
             this.y = e.clientY - this.topCanvas;
         });
 
-        this.canvas.on('touchstart', (e) => {
+        this.canvas.on("touchstart", (e) => {
             e.preventDefault();
             this.topCanvas = this.canvas[0].getBoundingClientRect().top;
             this.leftCanvas = this.canvas[0].getBoundingClientRect().left;
             this.x = e.touches[0].clientX - this.leftCanvas; // coordonnées sur le viewport - leftCanvas
             this.y = e.touches[0].clientY - this.topCanvas;
-            this.canvas.on('touchmove', this.draw);
+            this.canvas.on("touchmove", this.draw);
         });
 
-        this.canvas.on('touchend', (e) => {
+        this.canvas.on("touchend", (e) => {
             e.preventDefault();
-            this.canvas.off('touchmove', this.draw);
+            this.canvas.off("touchmove", this.draw);
         });
 
-        this.canvas.on('touchleave', (e) => {
+        this.canvas.on("touchleave", (e) => {
             e.preventDefault();
-            this.canvas.off('touchmove', this.draw);
+            this.canvas.off("touchmove", this.draw);
         });
 
-        this.canvas.on('touchmove', (e) => {
+        this.canvas.on("touchmove", (e) => {
             e.preventDefault();
             this.x2 = this.x;
             this.y2 = this.y;
@@ -86,13 +86,13 @@ class CanvasClass {
             console.log(this.x, this.y, this.x2, this.y2);
         });
 
-        $(window).on('resize', (e) => {
+        $(window).on("resize", (e) => {
             this.resize();
         });
     };
 
     resize() { // adapte la taille du canvas à celle de sa div
-        this.canvas.prop('width', this.canvasDiv.width());
-        this.canvas.prop('height', this.canvasDiv.height());
+        this.canvas.prop("width", this.canvasDiv.width());
+        this.canvas.prop("height", this.canvasDiv.height());
     };
 }

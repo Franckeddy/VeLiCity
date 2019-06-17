@@ -6,8 +6,8 @@ class ResaClass {
         this.timer = timer; // temps du décompte en millisecondes (ex. 20min = 20*60*1000)
         this.canvas = canvas; // permet de récupérer les valeurs de la classe Canvas (ex. this.canvas.ctx = le contexte du canvas)
         this.beforeForm = $('#before_form'); // message avant l'apparition du formulaire
-        this.formName = this.form.find('#name'); // input name du formulaire
-        this.formFirstName = this.form.find('#firstname'); // input firstname du formulaire
+        this.formName = this.form.find("#name"); // input name du formulaire
+        this.formFirstName = this.form.find("#firstname"); // input firstname du formulaire
         this.intervalResa = null;
         this.stopTimer = null;
         this.regexResa = /......../;
@@ -18,7 +18,7 @@ class ResaClass {
     initSettings() {
         $(document).ready(($) => { // Quand le DOM est prêt...
 
-            if (ResaClass.storageAvailable('localStorage')) {
+            if (ResaClass.storageAvailable("localStorage")) {
                 console.log("Nous pouvons utiliser localStorage");
             } else {
                 console.log("Malheureusement, localStorage n'est pas disponible");
@@ -54,7 +54,7 @@ class ResaClass {
         this.form.submit((event) => { // au submit du formulaire, déclencher...
             event.preventDefault();
             console.log("Réservé !");
-            this.canvas.canvasContainer.css('display', 'block'); // lancer le bloc canvas
+            this.canvas.canvasContainer.css("display", "block"); // lancer le bloc canvas
             this.canvas.resize();
             this.beforeForm = $('#before_form');
             $('#confirm_station').html(this.beforeForm.text().replace(this.regexResa, ''));
@@ -87,14 +87,14 @@ class ResaClass {
                 this.populateStorage(); // on sauvegarde les identifiants
                 this.loopTimer(); // on active le compte à rebours
 
-                $('#form_confirm').css('display', 'block');
+                $('#form_confirm').css("display", "block");
                 this.documentHeight = $(document).height();
 
                 $('html, body').animate({
                     scrollTop: this.documentHeight
                 }, 1000); // scroll down de la fenêtre de navigation
 
-                $(window).on('beforeunload', (event) => { // si l'utilisateur veut quitter l'onglet
+                $(window).on("beforeunload", (event) => { // si l'utilisateur veut quitter l'onglet
                     event.preventDefault(); // on l'avertit de la perte des données
                     console.log("Do you really want to close the window ?");
                 });
@@ -125,8 +125,8 @@ class ResaClass {
 
             if (distance < 0) { // fin du décompte
                 clearInterval(this.intervalResa); // fin de la boucle
-                $('#form_confirm').css('display', 'none');
-                $('#form_exp').css('display', 'block');
+                $('#form_confirm').css("display", "none");
+                $('#form_exp').css("display", "block");
                 sessionStorage.clear(); // supprime les valeurs temporaires
             }
             ;
@@ -138,8 +138,9 @@ class ResaClass {
         localStorage.firstname = this.formFirstName.val(); // enregistre la valeur prénom
         sessionStorage.station = $('#confirm_station').text(); // enregistre (temporairement) la valeur station
 
-        console.log(`Prénom et nom : ${localStorage.getItem('firstname')} ${localStorage.getItem('name')} réservé à la station ${sessionStorage.getItem('station')}`);
-
+        console.log(`Prénom et nom : ${localStorage.getItem("firstname")} 
+                    ${localStorage.getItem("name")} réservé à la station 
+                    ${sessionStorage.getItem("station")}`);
         this.setStyles();
     };
 
