@@ -1,4 +1,4 @@
-class SliderClass {
+class DiaporamaClass {
     constructor(container, timeout, fadeout, fadein) {
         this.slider = $(container); // selecteur du container du slider
         this.slide = this.slider.find('.slide'); // selecteur des slides
