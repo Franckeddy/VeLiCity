@@ -15,13 +15,36 @@
 
 .modal-wrapper {
   overflow: auto;
-  width: 600px;
+  width: 500px;
   height: 500px;
   max-width: calc(100vw - 20px);
   max-height: calc(100vh - 20px);
-  background-color: $white;
+  background-color: #b6d74970;
   padding: 20px;
   animation: slideFromTop .5s both;
+
+  h1 {
+    font-weight: bold;
+    color: $black;
+  }
+
+  p {
+    color: $whitesmoke;
+  }
+
+  ul {
+    li {
+      color: $whitesmoke;
+    }
+  }
+
+  button {
+    margin-bottom: 1em;
+
+    &:hover {
+      color: #00a0e1;
+    }
+  }
 }
 
 .modal[aria-hidden="true"] {

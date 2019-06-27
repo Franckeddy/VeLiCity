@@ -99,6 +99,7 @@ class ResaClass {
                     console.log("Do you really want to close the window ?");
                 });
             }
+            ;
         });
     }
 
@@ -128,6 +129,7 @@ class ResaClass {
                 $('#form_exp').css("display", "block");
                 sessionStorage.clear(); // supprime les valeurs temporaires
             }
+            ;
         }, 1000);
     };
 
@@ -152,4 +154,5 @@ class ResaClass {
         $('#confirm_station').html(currentStation);
         console.log(`${currentFirstname} ${currentName}`);
     };
+
 }
