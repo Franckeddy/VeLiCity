@@ -62,7 +62,7 @@
                                     <h1 id="titlemodal">Bienvenue</h1>
                                     <p>Découvrez rapidement le fonctionnement de l'application en utilisant les boutons
                                         <span class="chevron left" style="font-size: 1em"></span> <span
-                                                class="chevron right" style="font-size: 1em"></span>  pour vous déplacer
+                                                class="chevron right" style="font-size: 1em"></span> pour vous déplacer
                                         dans le
                                         manuel, sinon les flèches de votre clavier.</p>
                                     <h1>Carte des vélos</h1>
@@ -89,54 +89,37 @@
                                 <span class="fa fa-question-circle"></span>
                                 <h1>Fonctionnement du service</h1>
                             </header>
-                            <!-- Explication sur le fonctionnement du service par un diaporama -->
                             <div id="diaporama">
-                                <button id="bouttonGauche"><span class="chevron left"></span></button>
-                                <div id="caroussel">
-                                    <!-- 1ére image -->
-                                    <figure class="item">
-                                        <img src="assets/img/1.jpg" alt="">
-                                        <figcaption>
-                                            Choisissez votre station sur la carte
-                                        </figcaption>
-                                    </figure>
-                                    <!-- 2éme image -->
-                                    <figure class="item">
-                                        <img src="assets/img/2.jpg" alt="">
-                                        <figcaption>
-                                            Vérifier le nombre de vélos disponibles et
-                                            cliquez
-                                            sur le
-                                            bouton
-                                            de
-                                            réservation
-                                        </figcaption>
-                                    </figure>
-                                    <!-- 3éme image -->
-                                    <figure class="item">
-                                        <img src="assets/img/7.jpg" alt="">
-                                        <figcaption>
-                                            Apposez votre signature dans le cadre puis "Valider"
-                                        </figcaption>
-                                    </figure>
-                                    <!-- 4éme image -->
-                                    <figure class="item">
-                                        <img src="assets/img/logo/City.png" alt="">
-                                        <figcaption>
-                                            Votre réservation est prise en compte immédiatement pour une durée de 20
-                                            minutes
-                                        </figcaption>
-                                    </figure>
-                                    <!-- 5éme image -->
-                                    <figure class="item">
-                                        <img src="assets/img/logo/City.png" alt="">
-                                        <figcaption>
-                                            Le site de location de VéLiCity' vous souhaite une bonne
-                                            journée
-                                        </figcaption>
-                                    </figure>
+                                <div class="slide">
+                                    <p class="slide_text"><span>1</span> Sélectionnez votre station</p>
+                                    <img src="assets/img/1.jpg" style="width: inherit" alt="Carte des stations de vélos"/>
                                 </div>
-                                <button id="bouttonDroit"><span class="chevron right"></span></button>
+                                <div class="slide">
+                                    <p class="slide_text"><span>2</span> Effectuez votre réservation</p>
+                                    <img src="assets/img/2.jpg" style="width: inherit" alt="Réservez votre vélo"/>
+                                </div>
+                                <div class="slide">
+                                    <p class="slide_text"><span>3</span> Récupérez votre vélo !</p>
+                                    <img src="assets/img/7.jpg" style="width: inherit" alt="Récupérez votre vélo"/>
+                                </div>
+                                <a href="#void" id="slider_prev" title="Slide précédente">
+                                    <span class="fas fa-angle-left"></span>
+                                </a>
+                                <a href="#void" id="slider_next" title="Slide suivante">
+                                    <span class="fas fa-angle-right"></span>
+                                </a>
+                                <a href="#void" id="slider_pause" title="Pause/Reprendre">
+                                    <span class="fas fa-pause"></span>
+                                </a>
+                                <div id="timeline_container">
+                                    <div class="timeline" data-percent="100%">
+                                    </div>
+                                </div>
+                                <div id="slider_dots">
+                                    <a href="#void" class="dot firstdot" title="Première slide"></a>
+                                    <a href="#void" class="dot seconddot" title="Seconde slide"></a>
+                                    <a href="#void" class="dot thirddot" title="Dernière slide"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -193,29 +176,31 @@
                         </div>
                         <div class="row">
                             <div class="col-8">
-                        <div id="canvas_container" style="display: none">
-                            <div id="canvas_message">
-                                <i class="fas fa-signature"></i>
-                                <h1>Signez dans la case pour confirmer :</h1>
-                            </div>
-                            <div id="canvas_div">
-                                <canvas id="canvas_resa" width="200" height="200">Apposez votre signature (si vous voyez
-                                    ce
-                                    message, votre navigateur n'est pas à jour)
-                                </canvas>
-                            </div>
-                            <div id="canvas_confirm">
-                                <button type="submit" id="submit_canvas">Validez !</button>
-                                <button type="reset" id="clear_canvas">Recommencez</button>
-                            </div>
-                        </div>
+                                <div id="canvas_container" style="display: none">
+                                    <div id="canvas_message">
+                                        <i class="fas fa-signature"></i>
+                                        <h1>Signez dans la case pour confirmer :</h1>
+                                    </div>
+                                    <div id="canvas_div">
+                                        <canvas id="canvas_resa" width="200" height="200">Apposez votre signature (si
+                                            vous voyez
+                                            ce
+                                            message, votre navigateur n'est pas à jour)
+                                        </canvas>
+                                    </div>
+                                    <div id="canvas_confirm">
+                                        <button type="submit" id="submit_canvas">Validez !</button>
+                                        <button type="reset" id="clear_canvas">Recommencez</button>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-4">
-                        <p id="form_confirm">Réservation à la station : <br /><span id="confirm_station">STATION</span><br /> par <br /><span
-                                id="confirm_name">NAME</span><br/>
-                            Temps restant : <span id="timer"></span></p>
-                        <p id="form_exp">Réservation expirée</p>
-                        </div>
+                                <p id="form_confirm">Réservation à la station : <br/><span
+                                        id="confirm_station">STATION</span><br/> par <br/><span
+                                        id="confirm_name">NAME</span><br/>
+                                    Temps restant : <span id="timer"></span></p>
+                                <p id="form_exp">Réservation expirée</p>
+                            </div>
                         </div>
                     </section>
                 </div>
