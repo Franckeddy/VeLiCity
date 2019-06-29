@@ -1,5 +1,8 @@
 /******* Modal *******/
 
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+@include btn__split($colorPrimary, $colorSecondary, $black);
+
 .modal {
   position: fixed;
   display: flex;
@@ -19,13 +22,31 @@
   height: 500px;
   max-width: calc(100vw - 20px);
   max-height: calc(100vh - 20px);
+  border: 1px solid $black;
+  border-radius: 10px;
   background-color: #b6d74970;
   padding: 20px;
   animation: slideFromTop .5s both;
 
-  h1 {
-    font-weight: bold;
-    color: $black;
+  .modal-header {
+    border-bottom: 1px solid $black;
+    display: block;
+
+    h2 {
+      font-weight: bold;
+      color: $black;
+    }
+  }
+
+  .modal-inner {
+    display: block;
+    padding: 1em 1em;
+    border-bottom: 1px solid $black;
+
+    h3 {
+      font-weight: bold;
+      color: $black;
+    }
   }
 
   p {
@@ -39,7 +60,7 @@
   }
 
   button {
-    margin-bottom: 1em;
+    margin: 1em;
 
     &:hover {
       color: #00a0e1;
