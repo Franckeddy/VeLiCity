@@ -13,6 +13,24 @@
   #form_exp {
     margin: 30px 0 50px 0;
   }
+
+  #bloc_page {
+    width: 1367px;
+    margin: auto;
+  }
+
+  #diaporama {
+    width: 1200px;
+    height: 300px;
+  }
+
+  .slide_text {
+    left: 685px;
+  }
+
+  .slide_background {
+    right: -162px;
+  }
 }
 
 @media all and (max-width: 992px) {
@@ -20,6 +38,24 @@
   * {
     font-size: small;
     padding: 0.5em;
+  }
+
+  .col-4 {
+    display: none;
+  }
+
+  .col-sm-4 {
+    display: none;
+  }
+
+  .col-8 {
+    flex: none;
+    max-width: none;
+  }
+
+  .col-sm-8 {
+    flex: none;
+    max-width: none;
   }
 
   #map {
@@ -48,6 +84,30 @@
   #before_form li {
     text-align: center;
   }
+
+  #diaporama {
+    width: 100%;
+
+    .slide:nth-child(2) img {
+      right: -331px;
+    }
+
+    .slide:nth-child(3) img {
+      left: auto;
+    }
+
+    .slide_text {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      text-align: center;
+    }
+
+    .slide_text::before {
+      left: auto;
+      margin-left: -13px;
+    }
+  }
 }
 
 @media all and (max-width: 768px) {
@@ -71,7 +131,7 @@
   }
 
   .js-modal {
-    margin-top: 0;
+    display: none;
   }
 
   .col-4 {
@@ -90,6 +150,11 @@
   .col-sm-8 {
     flex: none;
     max-width: none;
+  }
+
+  .slide:nth-child(3) img {
+    width: auto;
+    left: -204px;
   }
 }
 
@@ -148,65 +213,6 @@
   #map {
     height: 300px;
   }
-}
-
-@media all and (min-width: 1367px) { /* responsive écrans HD */
-
-  #bloc_page {
-    width: 1367px;
-    margin: auto;
-  }
-
-  #diaporama {
-    width: 1200px;
-    height: 300px;
-  }
-
-  .slide_text {
-    left: 685px;
-  }
-
-  .slide_background {
-    right: -162px;
-  }
-}
-
-@media all and (max-width: 992px) { /* responsive écrans tablette (768px-992px) */
-
-  #diaporama {
-    width: 100%;
-
-    .slide:nth-child(2) img {
-      right: -331px;
-    }
-
-    .slide:nth-child(3) img {
-      left: auto;
-    }
-
-    .slide_text {
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      text-align: center;
-    }
-
-    .slide_text::before {
-      left: auto;
-      margin-left: -13px;
-    }
-  }
-}
-
-@media all and (max-width: 768px) { /* responsive grands smartphones (576px-768px) */
-
-  .slide:nth-child(3) img {
-    width: auto;
-    left: -204px;
-  }
-}
-
-@media all and (max-width: 576px) { /* responsive smartphones (320px-576px) */
 
   #diaporama {
     width: 100%;
