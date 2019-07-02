@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!--  MAIN META   -->
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
-    <meta property="og:title" content="VéLiCity | Location de vélos Nancy"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content=""/>
-    <meta property="og:image" content="img/logo/City.png"/>
-    <meta property="og:description" content="Location de vélos Nancy"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--  TITLE   -->
+    <title>VéLiCity</title>
+    <!--  SECONDARY META  -->
     <meta name="description" content="Site de location de vélos Nancy">
     <meta name="author" content="Franck Garçon">
-    <title>VéLiCity</title>
+    <!--  OPENGRAPH  -->
+    <meta property="og:title" content="VéLiCity | Location de vélos Nancy"/>
+    <meta property="og:type" content="website"/>
+    <meta property="url" content="http://">
+    <meta property="og:image" content="img/logo/City.png"/>
+    <meta property="og:description" content="Location de vélos Nancy"/>
+    <!--  TWITTER  -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="http://">
+    <meta name="twitter:title" content="VéliCity">
+    <meta name="twitter:description" content="Service de location de Vélo">
+    <meta name="twitter:creator" content="@eddyfranck">
+    <meta name="twitter:image" content="img/logo/City.png">
+    <!--  ICONS   -->
     <link rel="shortcut icon" type="image/icon" href="assets/img/logo/bike.png">
+    <!--  BOOTSTRAP   -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--  FONT   -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
           integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!--  LEAFLET   -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
           integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
           crossorigin=""/>
-    <link rel="stylesheet" href="assets/css/app.css"> <!-- compilation de style.scss -->
+    <!-- Compilation SCSS -->
+    <link rel="stylesheet" href="assets/css/app.css">
+
 </head>
 <body>
 <div class="container">
@@ -49,7 +67,8 @@
                                 <h1>Informations !</h1>
                             </header>
                             <div class="js-modal">
-                                <a href="#modal1" type="button" class="js-modal-close btn btn-light">Consultez la notice</a>
+                                <a href="#modal1" type="button" class="js-modal-close btn btn-light">Consultez la
+                                    notice</a>
                             </div>
                             <aside aria-hidden="true" class="modal" id="modal1" aria-labelledby="titlemodal"
                                    style="display: none">
@@ -161,7 +180,7 @@
                                     </div>
                                     <form id="form_bikes">
                                         <fieldset>
-                                            <legend>Réservez un vélo de cette station</legend>
+                                            <legend>Réservez un vélo</legend>
                                             <label for="name">Votre nom : </label><input type="text" name="name"
                                                                                          id="name"
                                                                                          placeholder="Votre nom"
