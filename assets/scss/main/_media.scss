@@ -1,4 +1,4 @@
-@media all and (min-width: 1367px) {
+@media (min-width: 1367px) {
   /* responsive écrans HD */
   #map_container {
     margin-right: 0;
@@ -33,7 +33,7 @@
   }
 }
 
-@media all and (max-width: 992px) {
+@media (max-width: 992px) {
   /* responsive écrans tablette (768px-992px) */
   * {
     font-size: small;
@@ -110,7 +110,7 @@
   }
 }
 
-@media all and (max-width: 768px) {
+@media (max-width: 768px) {
   /* responsive grands smartphones (576px-768px) */
   * {
     font-size: x-small;
@@ -158,7 +158,7 @@
   }
 }
 
-@media all and (max-width: 576px) {
+@media (max-width: 576px) {
   /* responsive smartphones (320px-576px) */
   * {
     font-size: xx-small;

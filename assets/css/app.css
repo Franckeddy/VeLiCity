@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
-@media all and (min-width: 1367px) {
+@media (min-width: 1367px) {
   /* responsive écrans HD */
   #map_container {
     margin-right: 0;
@@ -26,7 +26,7 @@
 
   .slide_background {
     right: -162px; } }
-@media all and (max-width: 992px) {
+@media (max-width: 992px) {
   /* responsive écrans tablette (768px-992px) */
   * {
     font-size: small;
@@ -81,7 +81,7 @@
     #diaporama .slide_text::before {
       left: auto;
       margin-left: -13px; } }
-@media all and (max-width: 768px) {
+@media (max-width: 768px) {
   /* responsive grands smartphones (576px-768px) */
   * {
     font-size: x-small;
@@ -117,7 +117,7 @@
   .slide:nth-child(3) img {
     width: auto;
     left: -204px; } }
-@media all and (max-width: 576px) {
+@media (max-width: 576px) {
   /* responsive smartphones (320px-576px) */
   * {
     font-size: xx-small;
@@ -235,7 +235,7 @@ body {
   margin: 0;
   padding: 4em;
   width: 100%;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   background-color: rgba(40, 36, 26, 0.43); }
 
 main {
@@ -243,6 +243,44 @@ main {
 
 p {
   margin-top: revert; }
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.h {
+  font-family: inherit;
+  font-weight: bold;
+  margin: 0 0 0.5em;
+  color: inherit; }
+
+h1, .h1 {
+  font-size: 30px; }
+
+h2, .h2 {
+  font-size: 27px; }
+
+h3, .h3 {
+  font-size: 24px; }
+
+h4, .h4 {
+  font-size: 21px; }
+
+h5, .h5 {
+  font-size: 17px; }
+
+h6, .h6 {
+  font-size: 15px; }
+
+p {
+  margin: 0 0 1em; }
+
+a {
+  color: rgba(0, 124, 180, 0.53); }
+  a:hover, a:focus {
+    text-decoration: none; }
 
 /******* Card *******/
 .card {

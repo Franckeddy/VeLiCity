@@ -12,7 +12,7 @@
 }
 
 #canvas_message { /* consigne expliquant le canvas */
-  background-image: linear-gradient(to bottom, $blue, $white);
+  background-image: linear-gradient(to bottom, $colorPrimary, $white);
   flex-wrap: wrap;
   height: 20%;
   box-sizing: border-box;
@@ -62,7 +62,7 @@
 #clear_canvas { /* remise à zéro du canvas */
   cursor: pointer;
   padding: 10px 15px 10px 15px;
-  border: 1px solid $blue;
+  border: 1px solid $colorPrimary;
   border-radius: 3px;
   background-color: $white;
   font-size: 15px;
@@ -73,12 +73,12 @@
   padding: 10px 15px 10px 15px;
   border: none;
   border-radius: 3px;
-  background-color: $blue;
+  background-color: $colorPrimary;
   font-size: 15px;
   color: $white;
 
   &:hover {
-    background-color: $blue-2;
+    background-color: $colorSecondary;
   }
 }
 

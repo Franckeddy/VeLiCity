@@ -65,7 +65,7 @@
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
-  background-color: $blue;
+  background-color: $colorPrimary;
   color: $white;
   transition: all .3s ease-in-out;
   cursor: pointer;
@@ -81,7 +81,7 @@
 #form_confirm { /* message de confirmation de réservation */
   color: $white;
   display: none;
-  background: radial-gradient($blue, $whitesmoke);
+  background: radial-gradient($colorPrimary, $whitesmoke);
   text-align: center;
 }
 
