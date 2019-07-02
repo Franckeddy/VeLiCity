@@ -5,12 +5,16 @@
 @import "main/keyframes";
 @import "main/global";
 @import "main/typo";
+
+//=Pages scss
 @import "page/card";
-@import "sections/header";
 @import "page/menu";
 @import "page/modal";
 @import "page/diaporama";
 @import "page/canvas";
 @import "page/form";
 @import "page/map";
+
+//=Section scss
+@import "sections/header";
 @import "sections/footer";

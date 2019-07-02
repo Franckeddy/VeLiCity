@@ -326,27 +326,6 @@ a {
   -o-border-radius: 20px;
   border-radius: 20px; }
 
-/******* Header *******/
-header {
-  display: flex;
-  align-items: center;
-  background-image: linear-gradient(to bottom, #0079b5, #fff);
-  padding-left: 1%;
-  color: #fff; }
-  header h1 {
-    padding: 21px 0;
-    margin-left: 20px;
-    font-size: 3vh; }
-  header span.fa {
-    font-size: 3em; }
-
-.fa {
-  color: #fff;
-  transition: color 1s; }
-
-.blue {
-  color: rgba(0, 124, 180, 0.53); }
-
 /******* header / menu *******/
 #logo {
   width: 100px;
@@ -1010,6 +989,27 @@ footer {
   margin-right: 20px; }
   #station_infos p {
     padding-left: 8px; }
+
+/******* Header *******/
+header {
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #0079b5, #fff);
+  padding-left: 1%;
+  color: #fff; }
+  header h1 {
+    padding: 21px 0;
+    margin-left: 20px;
+    font-size: 3vh; }
+  header span.fa {
+    font-size: 3em; }
+
+.fa {
+  color: #fff;
+  transition: color 1s; }
+
+.blue {
+  color: rgba(0, 124, 180, 0.53); }
 
 /******* Footer *******/
 footer {
