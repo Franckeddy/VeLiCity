@@ -130,7 +130,7 @@
     max-width: 100%;
   }
 
-  .js-modal {
+  #js-modal {
     display: none;
   }
 
@@ -163,7 +163,10 @@
   * {
     font-size: xx-small;
     padding: 0.1em;
+  }
 
+  #js-modal {
+    display: none;
   }
 
   #form_bikes legend {

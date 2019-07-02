@@ -42,17 +42,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
-                    <div class="card">
+                    <div class="card-1">
                         <div class="card-body">
                             <header>
                                 <span class="fa fa-bicycle"></span>
-                                <h1>Service VéLiCity'</h1>
+                                <h1>Informations !</h1>
                             </header>
-                            <p id="welcomeText">Bienvenue sur le site de location de Vélo en Libre service de la ville
-                                de
-                                Nancy </p>
                             <div class="js-modal">
-                                <a href="#modal1">Consultez la notice</a>
+                                <a href="#modal1" type="button" class="js-modal-close btn btn-light">Consultez la notice</a>
                             </div>
                             <aside aria-hidden="true" class="modal" id="modal1" aria-labelledby="titlemodal"
                                    style="display: none">
@@ -134,7 +131,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card-1">
+            <div class="card-2">
                 <div class="card-body">
                     <section id="map_container">
                         <header>
@@ -148,22 +145,20 @@
                             <div class="col-4">
                                 <div id="form_container">
                                     <div id="before_form" class="presentation">
-                                        <h3 id="before_click">Cliquez sur la station de votre choix pour afficher les
-                                            informations et
-                                            réserver votre vélo !</h3>
+                                        <h3 id="before_click">Cliquez sur la station de votre choix !</h3>
                                         <ul>
                                             <li id="station_verte">Station verte : plus de 10 vélos disponibles</li>
                                             <li id="station_orange">Station orange : moins de 10 vélos disponibles</li>
                                             <li id="station_rouge">Station rouge : aucun vélo disponible</li>
                                         </ul>
                                     </div>
-                                    <hr/>
                                     <div id="station_infos">
+                                        <hr/>
                                         <p>Adresse : </p>
                                         <p>Nombre de places : </p>
                                         <p>Nombre de vélos disponibles : </p>
+                                        <hr/>
                                     </div>
-                                    <hr/>
                                     <form id="form_bikes">
                                         <fieldset>
                                             <legend>Réservez un vélo de cette station</legend>

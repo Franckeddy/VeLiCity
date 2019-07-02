@@ -1,7 +1,41 @@
 /******* Modal *******/
 
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
-@include btn__split($colorPrimary, $colorSecondary, $black);
+@include btn__split($colorPrimary, $colorSecondary, $black); // appel à la mixin
+
+.js-modal {
+  display: block;
+  @include border-radius (8px);
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  letter-spacing: .4px;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  color: $white;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  margin: 90px auto auto;
+  width: 60%;
+
+  &:hover {
+    color: #00a0e1;
+    background: transparent;
+    box-shadow: 0 0 2px rgba(0, 158, 227, 0.5);
+    outline: 0;
+  }
+
+  a {
+    color: $black;
+    text-decoration: none;
+    background-color: transparent;
+
+    &:hover {
+      color: #00a0e1;
+    }
+  }
+}
 
 .modal {
   position: fixed;
@@ -76,38 +110,3 @@
   animation-name: slideToBottom;
 }
 
-.js-modal {
-  display: block;
-  padding: 10px 15px;
-  @include border-radius (8px);
-  font-size: 14px;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  letter-spacing: .4px;
-  line-height: 1.5;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
-  background-color: $blue;
-  color: $white;
-  transition: all .3s ease-in-out;
-  cursor: pointer;
-  margin: 2em auto auto;
-  width: 60%;
-
-  &:hover {
-    color: #00a0e1;
-    background: transparent;
-    box-shadow: 0 0 2px rgba(0, 158, 227, 0.5);
-    outline: 0;
-  }
-
-  a {
-    color: $white;
-    text-decoration: none;
-    background-color: transparent;
-
-    &:hover {
-      color: #00a0e1;
-    }
-  }
-}

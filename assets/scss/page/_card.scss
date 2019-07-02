@@ -1,3 +1,5 @@
+/******* Card *******/
+
 .card {
   margin-bottom: 1em;
   height: 350px;
@@ -5,6 +7,7 @@
 }
 
 .card-1 {
+  height: 110px;
   margin-bottom: 1em;
   position: relative;
   display: -ms-flexbox;
@@ -16,6 +19,20 @@
   background-color: $white;
   background-clip: border-box;
   border: 1px solid $grey;
-  border-radius: .25rem;
+  @include border-radius(20px)
+}
+
+.card-2 {
+  margin-bottom: 1em;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: $white;
+  background-clip: border-box;
+  border: 1px solid $grey;
   @include border-radius(20px)
 }
