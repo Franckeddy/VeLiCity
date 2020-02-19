@@ -56,14 +56,12 @@
 
     .slide_text {
       position: absolute;
-      left: 55%;
-      top: 8%;
+      top: 5%;
       bottom: 0;
       margin: auto;
       z-index: 5;
-      font-size: 20px;
       font-weight: bold;
-      color: $white;
+      color: $black;
       text-shadow: 2px 2px 4px #000000;
     }
 
@@ -71,54 +69,43 @@
       margin-right: 20px;
     }
 
-    .slide_text::before {
-      content: "";
-      position: absolute;
-      background-color: $black;
-      height: 42px;
-      width: 42px;
-      left: -13px;
-      top: -4px;
-      border-radius: 100%;
-      z-index: -1;
-    }
   }
 
 
   #slider_prev { /* bouton revenir en arrière */
     position: absolute;
     display: block;
-    border-radius: 0 6px 6px 0;
+    border-radius: 50%;
     width: 40px;
     height: 50px;
     top: 50%;
     transform: translateY(-50%);
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: $light-blue;
     font-size: 30px;
-    z-index: 6;
+    z-index: 3;
   }
 
   #slider_prev:hover, #slider_prev:active {
-    background-color: rgb(0, 0, 0);
+    background-color: $dark-whithesmoke;
   }
 
   #slider_next { /* bouton avancer */
     position: absolute;
     display: block;
-    border-radius: 6px 0 0 6px;
+    border-radius: 50%;
     width: 40px;
     height: 50px;
     top: 50%;
     transform: translateY(-50%);
     right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: $light-blue;
     font-size: 30px;
-    z-index: 6;
+    z-index: 3;
   }
 
   #slider_next:hover, #slider_next:active {
-    background-color: rgb(0, 0, 0);
+    background-color: $dark-whithesmoke;
   }
 
   #slider_pause { /* bouton pause */
@@ -126,18 +113,18 @@
     left: 50%;
     transform: translateX(-50%);
     display: block;
-    border-radius: 6px 6px 0 0;
+    border-radius: 50%;
     width: 50px;
     height: 50px;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: $light-blue;
     font-size: 22px;
-    z-index: 6;
+    z-index: 3;
     text-decoration: none;
   }
 
   #slider_pause:hover, #slider_pause:active {
-    background-color: rgb(0, 0, 0);
+    background-color: $dark-whithesmoke;
   }
 
   .fa-angle-left {
@@ -176,37 +163,6 @@
       height: 100%;
       width: 0;
       background-color: $light-blue;
-    }
-  }
-
-  #slider_dots { /* les trois points sous le slider */
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -30px;
-
-    .dot {
-      display: block;
-      width: 18px;
-      height: 18px;
-      border-radius: 100%;
-      margin-right: 10px;
-      background-color: #cfcfcf;
-      transition: background-color 0.6s ease;
-    }
-
-    .firstdot {
-      margin-left: 10px;
-    }
-
-    .dot:hover, .dot:active {
-      background-color: grey;
-    }
-
-    .dot_active {
-      background-color: grey;
     }
   }
 }

@@ -1,266 +1,46 @@
-@media (min-width: 1367px) {
-  /* responsive écrans HD */
-  #map_container {
-    margin-right: 0;
-    margin-left: 0;
-    margin-bottom: 50px;
-  }
-
-  #form_container {
-    width: 100%;
-  }
-
-  #form_exp {
-    margin: 30px 0 50px 0;
-  }
-
-  #bloc_page {
-    width: 1367px;
-    margin: auto;
-  }
-
-  #diaporama {
-    width: 1200px;
-    height: 300px;
-  }
-
-  .slide_text {
-    left: 685px;
-  }
-
-  .slide_background {
-    right: -162px;
-  }
+@media all and (max-width: 991px) {
+    .col-sm-4 {
+        display: none;
+    }
+    .col-sm-8 {
+        flex: none;
+        max-width: none;
+        img {
+            min-height: 100%;
+        }
+    }
+    .col-4 {
+        display: contents;
+    }
+    .col-8 {
+        flex: none;
+        max-width: none;
+    }
+    #form_container {
+        margin: auto;
+        width: inherit;
+    }
+    #form_confirm {
+        width: inherit;
+    }
 }
 
-@media (max-width: 992px) {
-  /* responsive écrans tablette (768px-992px) */
-  * {
-    font-size: small;
-    padding: 0.5em;
-  }
-
-  .col-4 {
-    display: none;
-  }
-
-  .col-sm-4 {
-    display: none;
-  }
-
-  .col-8 {
-    flex: none;
-    max-width: none;
-  }
-
-  .col-sm-8 {
-    flex: none;
-    max-width: none;
-  }
-
-  #map {
-    width: 60%;
-  }
-
-  .js-modal {
-    margin-top: 0;
-  }
-
-  #map_container {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  #form_container {
-    width: 40%;
-    height: auto;
-    max-width: 60%;
-  }
-
-  .presentation {
-    padding: 40px 30px 30px 30px;
-  }
-
-  #before_form li {
-    text-align: center;
-  }
-
-  #diaporama {
-    width: 100%;
-
-    .slide:nth-child(2) img {
-      right: -331px;
+@media all and (max-width: 1199px) {
+    h1 {
+        font-size: 2em;
     }
-
-    .slide:nth-child(3) img {
-      left: auto;
+    header-1 span.fa,
+    header-2 span.fa,
+    header-3 span.fa {
+        font-size: 2em;
     }
-
-    .slide_text {
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      text-align: center;
+    header-1 {
+        height: 25%;
     }
-
-    .slide_text::before {
-      left: auto;
-      margin-left: -13px;
-    }
-  }
 }
 
-@media (max-width: 768px) {
-  /* responsive grands smartphones (576px-768px) */
-  * {
-    font-size: x-small;
-    padding: 0.25em;
-  }
-
-  .col-sm-4 {
-    display: none;
-  }
-
-  #map {
-    width: 100%;
-  }
-
-  #form_container {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  #js-modal {
-    display: none;
-  }
-
-  .col-4 {
-    display: none;
-  }
-
-  .col-sm-4 {
-    display: none;
-  }
-
-  .col-8 {
-    flex: none;
-    max-width: none;
-  }
-
-  .col-sm-8 {
-    flex: none;
-    max-width: none;
-  }
-
-  .slide:nth-child(3) img {
-    width: auto;
-    left: -204px;
-  }
-}
-
-@media (max-width: 576px) {
-  /* responsive smartphones (320px-576px) */
-  * {
-    font-size: xx-small;
-    padding: 0.1em;
-  }
-
-  #js-modal {
-    display: none;
-  }
-
-  #form_bikes legend {
-    padding: 0 10px 10px 10px;
-  }
-
-  #form_container form input {
-    margin-top: 0;
-  }
-
-  #form_container form label {
-    margin-left: 5px;
-  }
-
-  #name {
-    margin: 0 0 15px 5px;
-    width: 80%;
-  }
-
-  #firstname {
-    margin: 0 0 20px 5px;
-    width: 80%;
-  }
-
-  #reservation {
-    margin: 0 0 10px 5px;
-  }
-
-  .col-4 {
-    display: none;
-  }
-
-  .col-sm-4 {
-    display: none;
-  }
-
-  .col-8 {
-    flex: none;
-    max-width: none;
-  }
-
-  .col-sm-8 {
-    flex: none;
-    max-width: none;
-  }
-
-  #map {
-    height: 300px;
-  }
-
-  #diaporama {
-    width: 100%;
-    height: 200px;
-    background: rgb(255, 196, 87);
-  }
-
-  #diaporama img {
-    display: none;
-  }
-
-  .slide_text {
-    left: 0;
-    right: 0;
-    height: auto;
-    text-align: center;
-    transform: translateX(-50%);
-    transform: translateY(-50%);
-    top: 52%;
-    width: 100%;
-  }
-
-  .slide_text span {
-    display: block;
-    margin-right: 2px;
-    margin-bottom: 15px;
-  }
-
-  .slide_text::before {
-    left: 50%;
-    transform: translateX(-50%);
-    top: -5px;
-    margin-left: auto;
-  }
-
-  .slide_background {
-    display: none;
-  }
-
-  #timeline_container {
-    z-index: 10;
-    height: 10px;
-  }
-
-  #slider_prev, #slider_next, #slider_pause {
-    display: none;
-  }
+@media all and (min-width: 1199px) {
+    header-1 {
+        height: 25%;
+    }
 }

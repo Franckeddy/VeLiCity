@@ -1,4 +1,5 @@
 // imports
+
 @import "main/variables";
 @import "main/mixins";
 @import "main/media";
@@ -6,7 +7,6 @@
 @import "main/global";
 @import "main/typo";
 
-//=Pages scss
 @import "page/card";
 @import "page/menu";
 @import "page/modal";
@@ -15,6 +15,5 @@
 @import "page/form";
 @import "page/map";
 
-//=Section scss
 @import "sections/header";
 @import "sections/footer";

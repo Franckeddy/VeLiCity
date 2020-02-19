@@ -1,15 +1,23 @@
 body {
-  margin: 0;
-  padding: 4em;
-  width: 100%;
-  font-family: $font-family;
-  background-color: $dark-whithesmoke;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: $font-family;
+    background-color: $dark-whithesmoke;
+}
+
+html {
+    margin-top: 4em;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 main {
-  margin: 1em;
+    margin: 1em;
 }
 
 p {
-  margin-top: revert;
+    margin-top: revert;
 }
