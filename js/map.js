@@ -1,4 +1,13 @@
 class MapClass {
+
+    /**
+     * @param container
+     * @param mapid
+     * @param lat
+     * @param lng
+     * @param zoom
+     * @param ajaxURL
+     */
     constructor(container, mapid, lat, lng, zoom, ajaxURL) {
         this.container = $(container);
         this.mapid = mapid;
@@ -33,7 +42,6 @@ class MapClass {
                 this.available_bikes = availableB;
                 this.last_update = lastupdate;
             }
-
         };
         this.greenIcon = L.icon({
             iconUrl: "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png",
@@ -43,7 +51,6 @@ class MapClass {
             shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
             shadowSize: [41, 41],
         });
-
         this.orangeIcon = L.icon({
             iconUrl: "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png",
             iconSize: [25, 41],
@@ -52,7 +59,6 @@ class MapClass {
             shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
             shadowSize: [41, 41],
         });
-
         this.redIcon = L.icon({
             iconUrl: "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png",
             iconSize: [25, 41],
@@ -69,32 +75,32 @@ class MapClass {
     }; // fin du constructor
 
     initSettings() {
-        this.document.ready( ($) => { // quand le DOM est prêt, on lance la méthode AJAX
+        this.document.ready(($) => { // quand le DOM est prêt, on lance la méthode AJAX
             this.launchAjax();
         });
     }
 
     launchAjax() {
-            $.ajax({
-                url: this.ajaxURL,
-                type: "GET",
-                dataType: "json",
-                data: {param1: "value1"},
-            })
-            .done(function() {
+        $.ajax({
+            url: this.ajaxURL,
+            type: "GET",
+            dataType: "json",
+            data: {param1: "value1"},
+        })
+            .done(function () {
                 console.log("success");
             })
-            .fail(function() {
+            .fail(function () {
                 console.log("error");
             })
-            .always( (response) => {
+            .always((response) => {
                 console.log("complete");
                 this.ajaxOK(response);
             });
-        };
+    };
 
     ajaxOK(response) { // fonction qui se déclenche quand  l'appel AJAX s'est terminé avec succès
-         // le tableau JS obtenu (jQuery traduit en JS)
+        // le tableau JS obtenu (jQuery traduit en JS)
         for (let station of response) { // création d'une classe pour chaque station
             let newStation = Object.create(this.stationModel);
             newStation.init(station.name, station.address, station.position.lat, station.position.lng, station.banking, station.status, station.bike_stands, station.available_bike_stands, station.available_bikes, station.last_update);
@@ -103,7 +109,7 @@ class MapClass {
 
             if (newStation.status === "CLOSED") { // si la station est FERMÉE
                 newStation.available_bikes === 0; // elle n'a plus de vélos disponibles
-            };
+            }
 
             if (newStation.available_bikes < 10) { // moins de 10 places restantes, il devient orange
                 myIcon = this.orangeIcon;
@@ -117,9 +123,8 @@ class MapClass {
             newMarker.addTo(this.map).on("click", (e) => {
                 this.newMarkerClic(newStation);
             });
-        };
+        }
     };
-
     newMarkerClic(newStation) {
         $("#before_form").remove();
         $("#form_container").prepend('<p id="before_form"></p>');
@@ -140,9 +145,9 @@ class MapClass {
 
         if (newStation.available_bikes > 0) { // S'il y a des vélos disponibles...
             $("#form_container form").css("display", "block");
-			$("html, body").animate({ // pour les mobiles, scroll down jusqu'au formulaire
-			    scrollTop: $("#before_form").offset().top
-			}, 1000);
+            $("html, body").animate({ // pour les mobiles, scroll down jusqu'au formulaire
+                scrollTop: $("#before_form").offset().top
+            }, 1000);
         } else {
             $("#nobikes").css("display", "block"); // message de réservation impossible
             $("html, body").animate({ // pour les mobiles, scroll down jusqu'au formulaire

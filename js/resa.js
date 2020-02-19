@@ -1,10 +1,14 @@
-/* ------ Classe Réservation (localeStorage, sessionStorage, compte à rebours) ----- */
-
 class ResaClass {
+
+    /**
+     * @param form      // ID du formulaire
+     * @param timer     // temps du décompte en millisecondes
+     * @param canvas    // permet de récupérer les valeurs de la classe Canvas (ex. this.canvas.ctx = le contexte du canvas)
+     */
     constructor(form, timer, canvas) {
-        this.form = $(form); // ID du formulaire
-        this.timer = timer; // temps du décompte en millisecondes (ex. 20min = 20*60*1000)
-        this.canvas = canvas; // permet de récupérer les valeurs de la classe Canvas (ex. this.canvas.ctx = le contexte du canvas)
+        this.form = $(form);
+        this.timer = timer;
+        this.canvas = canvas;
         this.beforeForm = $('#before_form'); // message avant l'apparition du formulaire
         this.formName = this.form.find("#name"); // input name du formulaire
         this.formFirstName = this.form.find("#firstname"); // input firstname du formulaire
@@ -13,7 +17,7 @@ class ResaClass {
         this.regexResa = /......../;
         this.documentHeight = $(document).height();
         this.initSettings();
-    }; // fin du constructor
+    };
 
     initSettings() {
         $(document).ready(($) => { // Quand le DOM est prêt...
@@ -23,7 +27,6 @@ class ResaClass {
             } else {
                 console.log("Malheureusement, localStorage n'est pas disponible");
             }
-            ;
 
             if (!localStorage.name) { // s'il n'y a pas d'élément name, on laisse l'utilisateur faire
                 console.log("Veuillez renseigner vos identifiants"); // populateStorage();
@@ -48,7 +51,6 @@ class ResaClass {
                     scrollTop: this.documentHeight
                 }, 1000); // descend la fenêtre de navigation à hauteur des informations de réservation
             }
-            ;
         });
 
         this.form.submit((event) => { // au submit du formulaire, déclencher...

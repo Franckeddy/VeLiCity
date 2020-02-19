@@ -1,4 +1,9 @@
 class CanvasClass {
+
+    /**
+     * @param canvasDiv
+     * @param canvas
+     */
     constructor(canvasDiv, canvas) {
         this.canvasDiv = $(canvasDiv);
         this.canvas = $(canvas);
@@ -13,7 +18,7 @@ class CanvasClass {
         this.canvasContainer = $('#canvas_container'); // fait le lien avec la classe Resa
         this.clear = $('#clear_canvas'); // idem
         this.submit = $('#submit_canvas'); // idem
-        this.click = function (e) { // crée une fonction stable qui permet au OFF de marcher
+        this.click = function(e) { // crée une fonction stable qui permet au OFF de marcher
             console.log("bougé");
             e.preventDefault(); // permet de ne pas déclencher d'événement de souris si c'est en mode digital
             this.ctx.strokeStyle = "grey";
